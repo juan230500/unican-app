@@ -1,0 +1,11 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App * {
+  margin: 0;
+  padding: 0;
+}
