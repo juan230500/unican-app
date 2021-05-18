@@ -2,43 +2,39 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../constants";
 import headerBg from "../assets/headerBg.jpg";
-import Navbar from "./Navbar";
 
 const Div = styled.div`
-  height: 640px;
+  height: 480px;
 
   background-image: url(${headerBg});
-  background-size: cover;
+  background-size: auto 250%;
   background-position: top;
 `;
 
 const Container = styled.div`
-  padding: 64px 48px;
-  box-sizing: border-box;
+  padding: 96px 48px;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
   color: ${COLORS.black};
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: normal;
-`;
-
-const SubTitle = styled.h1`
-  color: ${COLORS.grey};
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 2rem;
+  width: 50%;
+  margin: auto 0;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: 24px;
 `;
 
 const Header = () => {
   return (
     <Div>
-      <Navbar></Navbar>
       <Container>
-        <Title>Industria Unican</Title>
+        <Title>Industria de plásticos número 1 de centroamérica</Title>
       </Container>
     </Div>
   );
