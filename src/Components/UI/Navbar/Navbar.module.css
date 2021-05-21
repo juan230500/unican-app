@@ -1,0 +1,55 @@
+.Nav {
+  display: flex;
+  padding: 0 var(--horizontalMargin);
+  height: 72px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+
+  transition: background-color 0.1s ease-in;
+}
+
+.Transparent {
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.LinkContainer {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 0 16px;
+}
+
+.LinkButton {
+  border: 1px solid black;
+  padding: 12px;
+  margin: auto 3px;
+  left: 0;
+}
+
+.Home {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto 0;
+  border-bottom: 0px solid black;
+}
+
+.Group {
+  display: flex;
+  margin: 0 auto;
+}
+
+.LinkContainer:hover,
+.LinkButton:hover,
+.Home:hover {
+  transition: border-width 0.1s ease-in;
+  border-bottom-width: 4px;
+  cursor: pointer;
+}
