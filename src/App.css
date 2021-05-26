@@ -10,5 +10,21 @@ body,
   padding: 0;
   box-sizing: border-box;
 
-  --horizontalMargin: 32px;
+  --horizontalMargin: 80px;
+}
+
+.App h1,
+h2 {
+  font-family: "Cabin", sans-serif;
+}
+
+.App p,
+a {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .App * {
+    --horizontalMargin: 8px;
+  }
 }

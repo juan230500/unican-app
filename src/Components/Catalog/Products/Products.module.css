@@ -1,0 +1,7 @@
+.Container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 3;
+  padding: 0 16px;
+  gap: 16px;
+}

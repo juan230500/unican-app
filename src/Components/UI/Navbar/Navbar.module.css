@@ -8,6 +8,7 @@
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
 
   transition: background-color 0.1s ease-in;
+  z-index: 100;
 }
 
 .Transparent {
@@ -48,7 +49,8 @@ a {
 
 .LinkContainer:hover,
 .LinkButton:hover,
-.Home:hover {
+.Home:hover,
+.Active {
   transition: border-width 0.1s ease-in;
   border-bottom-width: 4px;
   cursor: pointer;

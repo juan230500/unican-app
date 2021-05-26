@@ -1,0 +1,43 @@
+.Container {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 160px;
+
+  flex: 1;
+  border-radius: 8px;
+  height: 240px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.SubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease-in;
+}
+
+.Container:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Container:hover .SubContainer {
+  flex: 1;
+}
+
+.Container:hover .SubContainer .Title {
+  font-size: 2.5rem;
+}
+
+.Title {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.5s ease-in;
+}

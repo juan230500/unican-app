@@ -1,0 +1,14 @@
+.Container {
+  margin: 0 var(--horizontalMargin);
+  margin-bottom: 64px;
+}
+
+.Title {
+  font-size: 3rem;
+  margin: 16px 0;
+}
+
+.Row {
+  display: flex;
+  gap: 16px;
+}

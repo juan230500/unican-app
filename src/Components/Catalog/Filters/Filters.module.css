@@ -1,0 +1,24 @@
+.Container {
+  background-color: #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Container li {
+  text-decoration: none;
+  list-style: none;
+  margin: 4px 0;
+  padding: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.Container li:hover,
+.Container li.Active {
+  background-color: black;
+  color: white;
+}
