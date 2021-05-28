@@ -11,19 +11,20 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setTop(window.pageYOffset < 80 && location.pathname === "/home");
+      setTop(window.pageYOffset < 40 && location.pathname === "/");
     });
   }, [location.pathname]);
 
   useEffect(() => {
-    setTop(location.pathname === "/home");
+    setTop(location.pathname === "/");
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <div className="App" onScroll={(e) => console.log(e.target)}>
       <Navbar transparent={top}></Navbar>
       <Switch>
-        <Route path="/home">
+        <Route path="/" exact>
           <HomePage></HomePage>
         </Route>
         <Route path="/catalog">
@@ -35,7 +36,7 @@ function App() {
         <Route path="/contact">
           <HomePage></HomePage>
         </Route>
-        <Redirect to="/home"></Redirect>
+        <Redirect to="/"></Redirect>
       </Switch>
       <Footer />
     </div>

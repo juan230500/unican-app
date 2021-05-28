@@ -11,7 +11,7 @@
   border: 1px solid #ccc;
   background-image: var(--img);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   overflow: hidden;
 }
 
@@ -19,20 +19,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease-in;
+  height: 50px;
 }
-
 .Container:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid black;
 }
 
 .Container:hover .SubContainer {
-  flex: 1;
+  background-color: black;
 }
 
 .Container:hover .SubContainer .Title {
-  font-size: 2.5rem;
+  color: yellow;
 }
 
 .Title {

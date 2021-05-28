@@ -11,7 +11,8 @@ const Navbar = (props) => {
       <NavLink
         className={classes.Home}
         activeClassName={classes.Active}
-        to="/home"
+        to="/"
+        exact
       >
         UNICAN
       </NavLink>

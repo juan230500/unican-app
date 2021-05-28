@@ -3,6 +3,7 @@ body,
 #root,
 .App {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .App * {
@@ -14,7 +15,8 @@ body,
 }
 
 .App h1,
-h2 {
+h2,
+h3 {
   font-family: "Cabin", sans-serif;
 }
 

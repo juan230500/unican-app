@@ -6,7 +6,11 @@ const Category = (props) => {
     "--img": `url("${props.img}")`,
   };
   return (
-    <div className={classes.Container} style={{ ...style, ...props.style }}>
+    <div
+      onClick={props.onClick}
+      className={classes.Container}
+      style={{ ...style, ...props.style }}
+    >
       <div className={classes.SubContainer}>
         <h1 className={classes.Title}>{props.title}</h1>
       </div>

@@ -1,7 +1,7 @@
 .Container {
   background-color: #20232a;
   color: white;
-  padding: 80px var(--horizontalMargin) 16px var(--horizontalMargin);
+  padding: 24px var(--horizontalMargin) 16px var(--horizontalMargin);
 }
 
 .Info {
@@ -10,9 +10,8 @@
 }
 
 .Column img {
-  width: 75%;
+  width: 40%;
   border-radius: 8px;
-  filter: brightness(0.95);
 }
 
 .Column {
