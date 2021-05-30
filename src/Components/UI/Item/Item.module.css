@@ -8,7 +8,7 @@
   height: 240px;
   transition: all 0.5s ease-in;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   background-image: var(--img);
   background-size: cover;
   background-position: bottom;
@@ -41,4 +41,11 @@
   font-size: 1rem;
   color: white;
   transition: all 0.5s ease-in;
+}
+
+.ImageLoading {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
