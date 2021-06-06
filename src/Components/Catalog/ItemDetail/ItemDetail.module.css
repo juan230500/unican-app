@@ -20,6 +20,7 @@
   padding: 24px;
   background-color: white;
   cursor: auto;
+  overflow-y: auto;
 
   display: flex;
   gap: 8px;
@@ -41,12 +42,32 @@
 }
 
 .ImgItem {
-  height: 100%;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
+  max-width: 50%;
 }
 
 .ImgItem img {
   height: 100%;
+  width: 100%;
+}
+
+.ListItem h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .Card {
+    padding: 8px;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .Column {
+    gap: 8px;
+  }
+
+  .ImgItem {
+    max-width: 100%;
+  }
 }

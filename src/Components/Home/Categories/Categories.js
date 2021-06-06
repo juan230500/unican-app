@@ -7,7 +7,7 @@ import imgCanasta from "../../../assets/Canasta.jpg";
 
 import { useHistory } from "react-router-dom";
 
-const ALTURA = 360;
+const ALTURA = 320;
 
 const Categories = () => {
   const history = useHistory();

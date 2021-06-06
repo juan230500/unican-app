@@ -1,14 +1,14 @@
 .Container {
   display: inline-flex;
   flex-direction: column;
-  min-width: 160px;
+  min-width: 120px;
 
   flex: 1;
   border-radius: 8px;
   height: 240px;
   transition: all 0.5s ease-in;
   cursor: pointer;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   background-image: var(--img);
   background-size: cover;
   background-position: bottom;
@@ -25,7 +25,7 @@
   height: 50px;
 }
 .Container:hover {
-  border: 2px solid black;
+  border-color: black;
 }
 
 .Container:hover .SubContainer {

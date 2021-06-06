@@ -12,21 +12,22 @@ body,
   box-sizing: border-box;
 
   --horizontalMargin: 80px;
+  --primmaryColor: #09416c;
 }
 
 .App h1,
 h2,
 h3 {
-  font-family: "Cabin", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .App p,
 a {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 @media (max-width: 768px) {
   .App * {
-    --horizontalMargin: 8px;
+    --horizontalMargin: 12px;
   }
 }

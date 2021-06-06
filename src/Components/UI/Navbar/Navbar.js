@@ -1,20 +1,13 @@
 import React from "react";
-//import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 const Navbar = (props) => {
-  const navStyles = [classes.Nav];
-  if (props.transparent) navStyles.push(classes.Transparent);
   return (
-    <nav className={navStyles.join(" ")}>
-      <NavLink
-        className={classes.Home}
-        activeClassName={classes.Active}
-        to="/"
-        exact
-      >
-        UNICAN
+    <nav className={classes.Nav}>
+      <NavLink className={classes.Home} to="/" exact>
+        <img alt="logo" src={logo}></img>
       </NavLink>
       <div className={classes.Group}>
         <NavLink
@@ -31,14 +24,14 @@ const Navbar = (props) => {
         >
           Nuestra empresa
         </NavLink>
+        <NavLink
+          className={classes.LinkContainer}
+          activeClassName={classes.Active}
+          to="/contact"
+        >
+          Contacto
+        </NavLink>
       </div>
-      <NavLink
-        to="/contact"
-        className={classes.LinkButton}
-        activeClassName={classes.Active}
-      >
-        Contacto
-      </NavLink>
     </nav>
   );
 };

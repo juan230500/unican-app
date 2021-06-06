@@ -1,0 +1,26 @@
+.About {
+  margin-top: 120px;
+  padding: 0 var(--horizontalMargin);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.Index {
+  position: sticky;
+  top: 120px;
+  margin-bottom: 32px;
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  flex: 1;
+  gap: 8px;
+}
+
+.Index a {
+  text-align: justify;
+  text-decoration: underline;
+  color: var(--primmaryColor);
+}

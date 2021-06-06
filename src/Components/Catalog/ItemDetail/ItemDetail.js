@@ -2,9 +2,9 @@ import React from "react";
 import classes from "./ItemDetail.module.css";
 
 const ItemDetail = (props) => {
-  const imageList = props.detail
-    ? [props.detail?.img, ...props.detail?.extraImgs]
-    : [];
+  // const imageList = props.detail
+  //   ? [props.detail?.img, ...props.detail?.extraImgs]
+  //   : [];
   return (
     <div
       onClick={props.onClose}
@@ -22,7 +22,7 @@ const ItemDetail = (props) => {
           ))}
         </div>
         <div className={classes.ImgItem}>
-          <img src={props.detail?.img}></img>
+          <img alt="product" src={props.detail?.img}></img>
         </div>
       </div>
     </div>

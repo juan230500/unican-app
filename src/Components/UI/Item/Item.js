@@ -18,7 +18,7 @@ const Category = (props) => {
   return (
     <div
       onClick={props.onClick}
-      className={classes.Container}
+      className={[classes.Container, props.className].join(" ")}
       style={{ ...style, ...props.style }}
     >
       <div className={classes.SubContainer}>

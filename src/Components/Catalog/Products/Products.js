@@ -13,7 +13,7 @@ const Products = (props) => {
       <Item
         onClick={() => props.setDetail(el)}
         key={i}
-        style={{ flex: "20% 0 0" }}
+        className={classes.CustomItem}
         {...el}
       ></Item>
     ));

@@ -1,7 +1,7 @@
 .Container {
   background-color: #20232a;
   color: white;
-  padding: 24px var(--horizontalMargin) 16px var(--horizontalMargin);
+  padding: 24px var(--horizontalMargin);
 }
 
 .Info {
@@ -10,7 +10,7 @@
 }
 
 .Column img {
-  width: 40%;
+  width: 240px;
   border-radius: 8px;
 }
 
@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: space-around;
   gap: 8px;
-  width: 50%;
+  font-size: 14px;
 }
 
 .Bar {
@@ -28,4 +28,14 @@
   height: 1px;
   width: 100%;
   margin: 16px 0;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    padding: 24px var(--horizontalMargin);
+  }
+  .Info {
+    flex-direction: column;
+    gap: 8px;
+  }
 }

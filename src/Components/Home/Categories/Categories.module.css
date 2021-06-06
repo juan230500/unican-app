@@ -12,3 +12,16 @@
   display: flex;
   gap: 48px;
 }
+
+@media (max-width: 768px) {
+  .Title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .Row {
+    flex-direction: column;
+    gap: 8px;
+    height: 800px;
+  }
+}
