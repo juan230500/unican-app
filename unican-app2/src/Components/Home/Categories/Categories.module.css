@@ -11,6 +11,7 @@
 .Row {
   display: flex;
   gap: 4px;
+  overflow-x: auto;
 }
 
 @media (max-width: 768px) {

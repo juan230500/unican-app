@@ -8,18 +8,20 @@
   gap: 16px;
 }
 
-.Container li {
+.Container span {
   text-decoration: none;
   list-style: none;
-  margin: 4px 0;
+  border: 1px dashed white;
+  display: inline-flex;
+  margin: 4px 4px;
   padding: 4px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.25s ease-in;
 }
 
-.Container li:hover,
-.Container li.Active {
+.Container span:hover,
+.Container span.Active {
   background-color: black;
   color: white;
 }

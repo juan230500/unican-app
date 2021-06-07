@@ -25,3 +25,8 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+.Row {
+  display: flex;
+  gap: 8px;
+}
