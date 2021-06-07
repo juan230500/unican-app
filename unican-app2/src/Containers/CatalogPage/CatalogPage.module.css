@@ -1,0 +1,18 @@
+.Container {
+  margin: 0 var(--horizontalMargin);
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Row {
+  margin: 40px 0;
+  display: flex;
+  min-height: 480px;
+}
+
+@media (max-width: 768px) {
+  .Row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,19 @@
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  gap: 16px 8px;
+}
+.CustomItem {
+  flex: 24% 0 0;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    margin: 0;
+  }
+
+  .CustomItem {
+    flex: 48% 0 0;
+  }
+}

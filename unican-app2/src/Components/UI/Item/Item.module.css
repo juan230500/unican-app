@@ -1,0 +1,46 @@
+.Container {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 120px;
+
+  flex: 1;
+  border-radius: 8px;
+  height: 240px;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: bottom;
+  overflow: hidden;
+}
+
+.SubContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease-in;
+  height: 50px;
+}
+.Container:hover {
+  border-color: var(--primmaryColor);
+}
+
+.Container:hover .SubContainer {
+  background-color: var(--primmaryColor);
+}
+
+.Title {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.ImageLoading {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

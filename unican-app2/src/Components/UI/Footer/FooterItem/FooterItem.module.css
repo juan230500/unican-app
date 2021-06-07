@@ -1,0 +1,9 @@
+.Container svg,
+.Container p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Container {
+  display: flex;
+}

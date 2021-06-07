@@ -1,0 +1,9 @@
+.Button {
+  display: inline-flex;
+  cursor: pointer;
+  background-color: var(--primmaryColor);
+  padding: 8px;
+  border: 0;
+  font-size: 18px;
+  color: white;
+}

@@ -1,0 +1,22 @@
+.Category {
+  flex: 1;
+  height: 320px;
+  background-size: cover;
+  background-position: bottom;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: all 0.25s ease-in;
+  opacity: 0.8;
+}
+
+.Text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--primmaryColor);
+}
+
+.Category:hover {
+  opacity: 1;
+}

@@ -1,0 +1,74 @@
+.ItemDetail {
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  transition: top 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Card {
+  width: 70%;
+  height: 85%;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: white;
+  cursor: auto;
+  overflow-y: auto;
+
+  display: flex;
+  gap: 8px;
+}
+
+.Column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Column h1 {
+  background-color: var(--primmaryColor);
+  color: white;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.ImgItem {
+  border: 1px solid #ccc;
+  max-width: 50%;
+}
+
+.ImgItem img {
+  height: 100%;
+  width: 100%;
+}
+
+.ListItem h3 {
+  color: var(--primmaryColor);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .Card {
+    padding: 8px;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .Column {
+    gap: 8px;
+  }
+
+  .ImgItem {
+    max-width: 100%;
+  }
+}
