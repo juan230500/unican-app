@@ -11,7 +11,7 @@
 .Container span {
   text-decoration: none;
   list-style: none;
-  border: 1px dashed white;
+  border: 1px solid white;
   display: inline-flex;
   margin: 4px 4px;
   padding: 4px;
@@ -22,7 +22,7 @@
 
 .Container span:hover,
 .Container span.Active {
-  background-color: black;
+  font-weight: bold;
   color: white;
 }
 

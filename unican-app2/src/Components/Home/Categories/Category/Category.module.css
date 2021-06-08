@@ -1,7 +1,6 @@
 .Category {
   flex: 1;
   height: 240px;
-  min-width: 280px;
   background-size: cover;
   background-position: bottom;
   cursor: pointer;
