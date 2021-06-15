@@ -6,6 +6,8 @@ import CatalogPage from "./Containers/CatalogPage/CatalogPage";
 import Footer from "./Components/UI/Footer/Footer";
 import AboutPage from "./Containers/AboutPage/AboutPage";
 import { useEffect } from "react";
+import ContactPage from "./Containers/ContactPage/ContactPage";
+import AdminPage from "./Containers/AdminPage/AdminPage";
 
 function App() {
   const location = useLocation();
@@ -28,7 +30,10 @@ function App() {
           <AboutPage></AboutPage>
         </Route>
         <Route path="/contact">
-          <HomePage></HomePage>
+          <ContactPage></ContactPage>
+        </Route>
+        <Route path="/admin">
+          <AdminPage></AdminPage>
         </Route>
         <Redirect to="/"></Redirect>
       </Switch>

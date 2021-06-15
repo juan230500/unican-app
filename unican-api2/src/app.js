@@ -1,12 +1,13 @@
 const express = require("express");
-const { connect, productModel } = require("./schemas");
 var mongoose = require("mongoose");
 var cors = require("cors");
+var auth = require("basic-auth");
 
 const initialize = require("./initialize");
+const products = require("./products");
 
 const app = express();
-const port = 3000;
+const port = 4000;
 
 mongoose.connect("mongodb://127.0.0.1/my_database", {
   useNewUrlParser: true,
@@ -17,13 +18,25 @@ app.use(express.json());
 
 app.use(cors());
 
-app.get("/products", async (req, res) => {
-  res.json(await productModel.find());
-});
+app.use("/products", products);
 
 app.post("/reset", (req, res) => {
   console.log("RESET");
   initialize();
+  res.json({ status: "ok" });
+});
+
+app.use("/admin", (req, res, next) => {
+  console.log("[ADMIN]");
+  var user = auth(req);
+  console.log(user);
+  if (user && user.name === "unican" && user.pass === "unican123") next();
+  else {
+    res.json({ status: "unauthorized" });
+  }
+});
+
+app.post("/admin/login", (req, res) => {
   res.json({ status: "ok" });
 });
 

@@ -2,7 +2,11 @@ import classes from "./Input.module.css";
 import React from "react";
 
 const Input = (props) => {
-  return <input className={classes.Input} {...props}></input>;
+  return props.type === "textarea" ? (
+    <textarea rows="7" className={classes.Input} {...props}></textarea>
+  ) : (
+    <input className={classes.Input} {...props}></input>
+  );
 };
 
 export default Input;

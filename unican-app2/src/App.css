@@ -23,7 +23,9 @@ h3 {
 
 .App p,
 a,
-button {
+button,
+input,
+textarea {
   font-family: "Open Sans", sans-serif;
 }
 

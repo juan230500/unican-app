@@ -1,10 +1,13 @@
 .Input {
   background-color: white;
-  border: 0;
+  outline: 0;
   padding: 8px;
-  border-radius: 8px;
+  width: 100%;
+  border: 1px solid #eee;
+  margin: 4px 0;
+  font-size: 16px;
 }
 
 .Input:focus {
-  border: 1px solid black;
+  border: 2px solid var(--primmaryColor);
 }

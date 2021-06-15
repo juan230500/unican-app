@@ -8,3 +8,5 @@ export const COLORS = {
 export const LAYOUT = {
   marginHorizontal: "64px",
 };
+
+export const BASE_URL = "http://192.168.100.111:4000/";

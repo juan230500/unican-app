@@ -12,6 +12,14 @@ const productSchema = new Schema({
 
 const productModel = mongoose.model("Product", productSchema);
 
+const userSchema = new Schema({
+  name: String,
+  password: String,
+});
+
+const userModel = mongoose.model("User", userSchema);
+
 module.exports = {
   productModel,
+  userModel,
 };
