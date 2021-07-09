@@ -12,6 +12,7 @@ body,
   box-sizing: border-box;
 
   --horizontalMargin: 80px;
+  --navbarHeight: 100px;
   --primmaryColor: #09416c;
 }
 

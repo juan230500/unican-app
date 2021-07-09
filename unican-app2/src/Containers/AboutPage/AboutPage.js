@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <div className={classes.About}>
       <Index />
-      <AboutText></AboutText>
+      <AboutText />
     </div>
   );
 };

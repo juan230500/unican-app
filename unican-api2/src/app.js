@@ -9,10 +9,13 @@ const products = require("./products");
 const app = express();
 const port = 4000;
 
-mongoose.connect("mongodb://127.0.0.1/my_database", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://juan230500:alvarado123@cluster0.wtk5m.mongodb.net/unican",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 app.use(express.json());
 

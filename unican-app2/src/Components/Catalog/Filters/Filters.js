@@ -22,7 +22,7 @@ const Filters = (props) => {
             className={el === props.categoryFilter ? classes.Active : ""}
             key={i}
           >
-            {el}
+            {el} {el === props.categoryFilter ? "X" : null}
           </span>
         ))}
       </div>

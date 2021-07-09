@@ -9,6 +9,24 @@ import { useEffect } from "react";
 import ContactPage from "./Containers/ContactPage/ContactPage";
 import AdminPage from "./Containers/AdminPage/AdminPage";
 
+/**
+ * TODO
+ * * filtrar inputs con nombres
+ * * inputs multivalor
+ * * inputs de imagenes
+ * * administrador de categorías
+ * * adminsitrador de imágenes
+ *
+ * 5) animaciones
+ * 6) revisar valores
+ * 7) "su mejor socio en soluciones"
+ * 8) "brindar soluciones de inyección"
+ * 9) colores como cuadritos
+ * 10) texto expandible en valores
+ * 11) mapa estático de google
+ * 12) formulario de contacto
+ */
+
 function App() {
   const location = useLocation();
 

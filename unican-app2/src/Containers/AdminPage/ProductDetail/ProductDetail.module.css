@@ -1,0 +1,18 @@
+.Row {
+  display: flex;
+  gap: 8px;
+}
+
+.Detail {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Detail strong {
+  width: 120px;
+  display: inline-block;
+}

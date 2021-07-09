@@ -26,7 +26,7 @@ const Categories = () => {
   return (
     <div className={classes.Container}>
       <h1 className={classes.Title}>Nuestros productos</h1>
-      <Slider {...settings} arrows>
+      <Slider {...settings}>
         <Category
           onClick={() => history.push("/catalog?Canastas")}
           title="Canastas"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import classes from "./Item.module.css";
+import classes from "./Product.module.css";
 import { SyncLoader } from "react-spinners";
 
 const Category = (props) => {

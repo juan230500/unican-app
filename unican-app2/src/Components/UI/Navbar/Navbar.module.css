@@ -1,7 +1,7 @@
 .Nav {
   display: flex;
   padding: 0 var(--horizontalMargin);
-  height: 100px;
+  height: var(--navbarHeight);
   position: fixed;
   top: 0;
   width: 100%;

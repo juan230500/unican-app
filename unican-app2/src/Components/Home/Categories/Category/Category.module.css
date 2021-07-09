@@ -1,12 +1,12 @@
 .Category {
   flex: 1;
-  height: 240px;
+  height: 340px;
   background-size: cover;
   background-position: bottom;
   cursor: pointer;
-  border: 1px solid white;
   transition: all 0.25s ease-in;
   opacity: 0.8;
+  margin: 0 2px;
 }
 
 .Text {

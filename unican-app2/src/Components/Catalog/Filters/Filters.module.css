@@ -17,13 +17,14 @@
   padding: 4px;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .Container span:hover,
 .Container span.Active {
   font-weight: bold;
   color: white;
+  border-width: 2px;
 }
 
 .Column input {

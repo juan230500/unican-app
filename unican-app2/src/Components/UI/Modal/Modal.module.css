@@ -1,0 +1,15 @@
+.Modal {
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    transition: top 0.5s ease;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  

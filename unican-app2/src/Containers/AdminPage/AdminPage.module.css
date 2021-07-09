@@ -4,52 +4,13 @@
   padding: 0 var(--horizontalMargin);
 }
 
-.Container {
-  margin: 1800px 0;
-  max-width: 400px;
-  height: 320px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-
-  margin: auto;
-  text-align: center;
+.Row {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.Item {
-  cursor: pointer;
-  background-color: #ccc;
-  padding: 4px;
+  gap: 8px;
 }
 
 .Data {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-}
-
-.Data li:hover {
-  font-weight: bold;
-}
-
-.Detail {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.Detail strong {
-  width: 120px;
-  display: inline-block;
-}
-
-.Row {
-  display: flex;
   gap: 8px;
 }

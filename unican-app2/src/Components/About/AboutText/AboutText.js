@@ -17,9 +17,7 @@ const AboutText = () => {
         )}
         <div>
           <h1
-            style={{
-              fontSize: el.level === 1 ? 40 : 24,
-            }}
+            style={{ fontSize: el.level === 1 ? 40 : 24 }}
             id={el.title}
           >
             {el.title}

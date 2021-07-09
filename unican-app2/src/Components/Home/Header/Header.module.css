@@ -1,6 +1,7 @@
-.Div {
-  height: 480px;
+.Header {
+  height: 400px;
   margin-bottom: 120px;
+  margin-top: var(--navbarHeight);
 
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@
   margin: 0 var(--horizontalMargin);
   padding: 16px;
   background-color: white;
-  bottom: -120px;
+  bottom: -160px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 

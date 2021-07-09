@@ -1,9 +1,7 @@
 .Container {
   display: inline-flex;
   flex-direction: column;
-  min-width: 120px;
 
-  flex: 1;
   border-radius: 8px;
   height: 240px;
   transition: all 0.25s ease-in;
@@ -24,6 +22,7 @@
   transition: all 0.5s ease-in;
   height: 50px;
 }
+
 .Container:hover {
   border-color: var(--primmaryColor);
 }
