@@ -6,7 +6,6 @@
   height: 240px;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  border: 1px solid #ccc;
   background-image: var(--img);
   background-size: cover;
   background-position: bottom;

@@ -13,6 +13,12 @@
 }
 
 .Detail strong {
-  width: 120px;
+  width: 25%;
   display: inline-block;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

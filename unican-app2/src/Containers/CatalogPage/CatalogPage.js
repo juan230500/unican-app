@@ -41,25 +41,20 @@ const CatalogPage = () => {
   }, [detail, history]);
 
   useEffect(() => {
-    location.pathname === "/catalog" &&
-      setDetail();
+    location.pathname === "/catalog" && setDetail();
   }, [location.pathname]);
 
   const filterProducts = (products) => {
     const filtered = products
-      .filter((el) =>
-        el.title.toLowerCase().includes(nameFilter.toLowerCase())
-      )
-      .filter(
-        (el) => !categoryFilter || el.category === categoryFilter
-      )
-    return filtered
-  }
+      .filter((el) => el.title.toLowerCase().includes(nameFilter.toLowerCase()))
+      .filter((el) => !categoryFilter || el.category === categoryFilter);
+    return filtered;
+  };
 
   return (
     <div className={classes.Container}>
       <Modal onClose={() => setDetail(null)} show={detail}>
-        <ItemDetail detail={detail}></ItemDetail>
+        {detail && <ItemDetail detail={detail}></ItemDetail>}
       </Modal>
       <h1>Nuestros productos</h1>
       <Filters
@@ -67,10 +62,7 @@ const CatalogPage = () => {
         setCategoryFilter={setCategoryFilter}
         categoryFilter={categoryFilter}
       />
-      <Products
-        products={filterProducts(products)}
-        setDetail={setDetail}
-      />
+      <Products products={filterProducts(products)} setDetail={setDetail} />
     </div>
   );
 };

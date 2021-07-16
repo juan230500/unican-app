@@ -5,13 +5,18 @@ const Schema = mongoose.Schema;
 const productSchema = new Schema({
   title: String,
   category: String,
-  imgs: [String],
+  imgs: [
+    {
+      name: String,
+      link: String,
+    },
+  ],
   info: [
     {
       name: String,
       description: String,
-      options: [String]
-    }
+      options: [String],
+    },
   ],
 });
 

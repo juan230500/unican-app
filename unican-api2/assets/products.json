@@ -3,8 +3,10 @@
     "title": "Cubeta 5 gl (19 ltrs)",
     "category": "Cubetas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1MlsvLl8M4KvcyaxN6bstAtgxYQLVK81W",
-      "https://drive.google.com/uc?export=view&id=1MlsvLl8M4KvcyaxN6bstAtgxYQLVK81W"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1MlsvLl8M4KvcyaxN6bstAtgxYQLVK81W"
+      }
     ],
     "info": [
       {
@@ -30,7 +32,10 @@
     "title": "Cubeta de 2.5 gl (10 ltrs)",
     "category": "Cubetas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1Py2utQawqZdLw6ct_4_6nh67tRNDHNja"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1Py2utQawqZdLw6ct_4_6nh67tRNDHNja"
+      }
     ],
     "info": [
       {
@@ -55,7 +60,10 @@
     "title": "Cubeta de 1 gl (3.79 ltrs)",
     "category": "Cubetas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1i6EDHk1jrdwwl9JEOqIArFoz1QfsvILR"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1i6EDHk1jrdwwl9JEOqIArFoz1QfsvILR"
+      }
     ],
     "info": [
       {
@@ -80,7 +88,10 @@
     "title": "Bidón 5 gl (19 ltrs)",
     "category": "Bidones",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1N7sF0-0o55ReZbpDtLi5amUSLzaY6p9e"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1N7sF0-0o55ReZbpDtLi5amUSLzaY6p9e"
+      }
     ],
     "info": [
       {
@@ -97,7 +108,10 @@
     "title": "Canasta Tipo María",
     "category": "Canastas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=170ikM8TT4Z0vMKPCMivQK7_IgpuGE_qf"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=170ikM8TT4Z0vMKPCMivQK7_IgpuGE_qf"
+      }
     ],
     "info": [
       {
@@ -126,7 +140,10 @@
     "title": "Canasta Tipo Arizona",
     "category": "Canastas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1WS32vBgZ_9WqkZe039-0P2q1fobPSFRa"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1WS32vBgZ_9WqkZe039-0P2q1fobPSFRa"
+      }
     ],
     "info": [
       {
@@ -155,7 +172,14 @@
     "title": "Canasta Tipo California",
     "category": "Canastas",
     "imgs": [
-      "https://drive.google.com/uc?export=view&id=1mAfO-J-LT6OP0KT0L8aJCCj10fiRb4xv"
+      {
+        "name": "test.png",
+        "link": "https://drive.google.com/uc?export=view&id=1mAfO-J-LT6OP0KT0L8aJCCj10fiRb4xv"
+      },
+      {
+        "name": "test2.png",
+        "link": "https://unican-images.s3.amazonaws.com/foto.jpg"
+      }
     ],
     "info": [
       {

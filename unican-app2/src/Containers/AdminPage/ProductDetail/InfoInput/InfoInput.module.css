@@ -1,0 +1,15 @@
+.ListItem {
+  background-color: var(--primmaryColor);
+  padding: 8px;
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.Container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

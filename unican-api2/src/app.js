@@ -9,19 +9,14 @@ const products = require("./products");
 const app = express();
 const port = 4000;
 
-mongoose.connect(
-  "mongodb+srv://juan230500:alvarado123@cluster0.wtk5m.mongodb.net/unican",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect("mongodb://localhost:27017/unican", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(express.json());
 
 app.use(cors());
-
-app.use("/products", products);
 
 app.post("/reset", (req, res) => {
   console.log("RESET");
@@ -29,19 +24,26 @@ app.post("/reset", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.use("/admin", (req, res, next) => {
+const authorize = (req, res, next) => {
+  if (req.method === "GET") {
+    next();
+    return;
+  }
   console.log("[ADMIN]");
   var user = auth(req);
   console.log(user);
   if (user && user.name === "unican" && user.pass === "unican123") next();
   else {
-    res.json({ status: "unauthorized" });
+    console.log(req.headers);
+    res.status(401).json({ status: "unauthorized" });
   }
-});
+};
 
-app.post("/admin/login", (req, res) => {
+app.post("/admin/login", authorize, (req, res) => {
   res.json({ status: "ok" });
 });
+
+app.use("/products", authorize, products);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

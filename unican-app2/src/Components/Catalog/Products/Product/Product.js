@@ -7,12 +7,12 @@ const Category = (props) => {
 
   useEffect(() => {
     const imageLoader = new Image();
-    imageLoader.src = props.img;
+    imageLoader.src = props.imgs[0].link;
     imageLoader.onload = () => setLoading(false);
-  }, [props.img]);
+  }, [props.imgs]);
 
   const style = {
-    "--img": `url("${props.img}")`,
+    "--img": `url("${props.imgs[0].link}")`,
   };
 
   return (

@@ -1,0 +1,24 @@
+.Image {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+}
+
+.ImageItem {
+  border: 1px solid var(--primmaryColor);
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4px;
+  max-width: 240px;
+}
+
+.ImageItem strong {
+  width: unset;
+}
+
+.Container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

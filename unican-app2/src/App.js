@@ -9,13 +9,18 @@ import { useEffect } from "react";
 import ContactPage from "./Containers/ContactPage/ContactPage";
 import AdminPage from "./Containers/AdminPage/AdminPage";
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 /**
  * TODO
- * * filtrar inputs con nombres
- * * inputs multivalor
- * * inputs de imagenes
- * * administrador de categorías
- * * adminsitrador de imágenes
+ * *validación de forms
+ * *migrar a ec2
+ * *sistema de copias de seguridad
+ * *manejo de errores de server del lado del cliente
+ *
+ * *popup de notificaciones [LISTO]
+ * *mapa estático de google [LISTO]
  *
  * 5) animaciones
  * 6) revisar valores
@@ -36,6 +41,7 @@ function App() {
 
   return (
     <div className="App" onScroll={(e) => console.log(e.target)}>
+      <ToastContainer />
       <Navbar></Navbar>
       <Switch>
         <Route path="/" exact>
