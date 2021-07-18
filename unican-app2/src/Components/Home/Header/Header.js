@@ -3,20 +3,30 @@ import classes from "./Header.module.css";
 
 const Header = () => {
   const [index, setIndex] = useState(0);
-  const importAll = (r) =>
-    r
-      .keys()
-      .map(r)
-      .map((el) => el.default);
-  const images = importAll(
-    require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
-  );
+  const [images, setImages] = useState([]);
+
+  useEffect(() => getImages(), []);
+
+  const getImages = async () => {
+    function importAll(r) {
+      return r
+        .keys()
+        .map(r)
+        .map((el) => el.default);
+    }
+    setImages(
+      importAll(
+        require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
+      )
+    );
+  };
 
   useEffect(() => {
-    setInterval(() => {
+    const id = setInterval(() => {
       setIndex((i) => i + 1);
-    }, 4000);
-  }, []);
+    }, 6000);
+    return () => clearInterval(id);
+  }, [images]);
 
   return (
     <div className={classes.Header}>
@@ -39,7 +49,7 @@ const Header = () => {
                   : "-100%",
             }}
             src={el}
-            alt="home"
+            alt=""
           ></img>
         ))}
       </div>

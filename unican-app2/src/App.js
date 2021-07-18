@@ -14,21 +14,21 @@ import { ToastContainer } from "react-toastify";
 
 /**
  * TODO
- * *validación de forms
- * *migrar a ec2
+ * *validación de forms [NO URGENTE]
+ * *migrar a ec2 [HOY]
  * *sistema de copias de seguridad
  * *manejo de errores de server del lado del cliente
  *
  * *popup de notificaciones [LISTO]
- * *mapa estático de google [LISTO]
+ * *administrador de categorías [OPCIONAL]
  *
- * 5) animaciones
+ * 5) animaciones [HOY]
  * 6) revisar valores
  * 7) "su mejor socio en soluciones"
  * 8) "brindar soluciones de inyección"
  * 9) colores como cuadritos
  * 10) texto expandible en valores
- * 11) mapa estático de google
+ * 11) mapa estático de google [LISTO]
  * 12) formulario de contacto
  */
 

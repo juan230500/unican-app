@@ -3,9 +3,9 @@ const router = require("express").Router();
 const fs = require("fs");
 
 const AWS = require("aws-sdk");
-const ID = "";
-const SECRET = "";
-const BUCKET_NAME = "";
+const ID = process.env.AWS_KEY;
+const SECRET = process.env.AWS_SECRET;
+const BUCKET_NAME = process.env.AWS_BUCKET;
 
 var multer = require("multer");
 var storage = multer.diskStorage({

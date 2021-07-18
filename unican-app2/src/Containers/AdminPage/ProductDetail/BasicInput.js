@@ -4,10 +4,21 @@ const BasicInput = (props) => {
   return (
     <div>
       <strong>{props.label}</strong>
-      <input
-        value={props.value}
-        onChange={(e) => props.onChange(e.target.value)}
-      ></input>
+      {props.options ? (
+        <select
+          value={props.value}
+          onChange={(e) => props.onChange(e.target.value)}
+        >
+          {props.options.map((el) => (
+            <option>{el}</option>
+          ))}
+        </select>
+      ) : (
+        <input
+          value={props.value}
+          onChange={(e) => props.onChange(e.target.value)}
+        ></input>
+      )}
     </div>
   );
 };

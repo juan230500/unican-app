@@ -19,12 +19,14 @@ a {
 .Home {
   display: inline-flex;
   height: 100%;
-  width: 100px;
+  overflow: hidden;
 }
 
 .Home img {
   margin: auto 0;
-  height: 80%;
+  margin-top: -24px;
+  height: 150%;
+  object-fit: cover;
 }
 
 .LinkContainer {

@@ -36,14 +36,6 @@ const CatalogPage = () => {
     getProducts();
   }, []);
 
-  useEffect(() => {
-    detail ? history.push("/catalog/detail") : history.push("/catalog");
-  }, [detail, history]);
-
-  useEffect(() => {
-    location.pathname === "/catalog" && setDetail();
-  }, [location.pathname]);
-
   const filterProducts = (products) => {
     const filtered = products
       .filter((el) => el.title.toLowerCase().includes(nameFilter.toLowerCase()))

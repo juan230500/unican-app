@@ -44,6 +44,7 @@ const ProductDetail = (props) => {
         <BasicInput
           value={props.detail.category}
           label="Categoría del producto"
+          options={["Cubetas", "Canastas", "Cajas", "Bidón"]}
           onChange={(v) => onChange(v, "category")}
         ></BasicInput>
         <InfoInput

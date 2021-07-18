@@ -10,6 +10,7 @@
 }
 
 .Column img {
+  background-color: white;
   width: 240px;
   border-radius: 8px;
 }
