@@ -21,6 +21,18 @@
       "level": 1
     },
     {
+      "title": "Política Integrada de la Empresa",
+      "text": "Nos comprometemos a través de la mejora continua de los métodos de trabajo, los procesos, el trabajo en equipo y la capacitación del personal a:\n• Satisfacer las necesidades de nuestros clientes en cuanto a tiempos de entrega, cantidad y calidad, así como con los requisitos de otras partes interesadas.\n• Cumplir con los requisitos legales y reglamentarios que correspondan.\n• Asegurar la disponibilidad de la información y de los recursos necesarios para lograr los objetivos y las metas energéticas.\n• Apoyar el diseño y la adquisición de productos y servicios de eficiencia energética, que impacten positivamente el desempeño energético.",
+      "level": 1,
+      "icon": "FaHandshake"
+    },
+    {
+      "title": "Certificaciones",
+      "text": "",
+      "level": 1,
+      "certify": true
+    },
+    {
       "title": "Valores",
       "level": 1
     },
@@ -45,6 +57,12 @@
     {
       "title": "Respeto",
       "text": "Creemos que el respeto debe ser demostrado con hechos entre todos los colaboradores de la empresa. Las palabras, las acciones y el trato diario deben reflejar un profundo respeto hacia las personas sin importar su nivel. Se trata también de respetar la diversidad cultural que resulta de tener empresas en diferentes países.",
+      "level": 2,
+      "icon": "FaHandshake"
+    },
+    {
+      "title": "Satisfacción al Cliente",
+      "text": "Estamos comprometidos con una cultura de satisfacción total de nuestros clientes.",
       "level": 2,
       "icon": "FaHandshake"
     }

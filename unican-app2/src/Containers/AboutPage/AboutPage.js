@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./AboutPage.module.css";
 import Info from "./Info/Info";
-import aboutJson from "../../assets/about.json";
+import aboutJson from "../../assets/about/about.json";
 
 const AboutPage = () => {
   const [index, setIndex] = useState(-1);
@@ -26,6 +26,7 @@ const AboutPage = () => {
             showText={index === i}
             title={el.title}
             text={el.text}
+            certify={el.certify}
           ></Info>
         ))}
       </div>

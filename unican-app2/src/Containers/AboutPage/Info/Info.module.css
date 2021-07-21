@@ -3,7 +3,7 @@
   color: white;
   padding: 8px;
   width: 33.3333%;
-  height: 160px;
+  height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +17,10 @@
 
 .Info:hover {
   background-color: var(--primmaryColor);
+}
+
+.Info p {
+  white-space: pre-line;
 }
 
 .Info h2 {
@@ -43,6 +47,7 @@
   }
 
   .Info h2 {
+    font-size: 1.25rem;
     display: flex;
     align-items: center;
   }
