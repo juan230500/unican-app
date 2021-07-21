@@ -50,10 +50,7 @@ a {
 
 @media (max-width: 768px) {
   .Home img {
-    height: 60%;
-  }
-  .Nav {
-    height: 64px;
+    margin-top: -12px;
   }
 
   a {

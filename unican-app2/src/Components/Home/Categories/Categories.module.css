@@ -4,10 +4,10 @@
 }
 
 .Title {
+  text-align: center;
   font-size: 3rem;
   margin: 16px 0;
 }
-
 
 @media (max-width: 768px) {
   .Title {

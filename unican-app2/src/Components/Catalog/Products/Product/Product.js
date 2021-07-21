@@ -11,23 +11,22 @@ const Category = (props) => {
     imageLoader.onload = () => setLoading(false);
   }, [props.imgs]);
 
-  const style = {
-    "--img": `url("${props.imgs[0].link}")`,
-  };
-
   return (
     <div
       onClick={props.onClick}
       className={[classes.Container, props.className].join(" ")}
-      style={{ ...style, ...props.style }}
+      style={{ ...props.style, "--initial-top": Math.random() * 1000 + "px" }}
     >
       <div className={classes.SubContainer}>
         <h1 className={classes.Title}>{props.title}</h1>
       </div>
-      {loading && (
+
+      {loading ? (
         <div className={classes.ImageLoading}>
           <SyncLoader></SyncLoader>
         </div>
+      ) : (
+        <img src={props.imgs[0].link} alt="producto"></img>
       )}
     </div>
   );

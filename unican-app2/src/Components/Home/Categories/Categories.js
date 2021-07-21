@@ -33,8 +33,8 @@ const Categories = () => {
           img={imgCanasta}
         ></Category>
         <Category
-          onClick={() => history.push("/catalog?Bidones")}
-          title="Bidones"
+          onClick={() => history.push("/catalog?Bidón")}
+          title="Bidón"
           img={imgBidon}
         ></Category>
         <Category
@@ -48,7 +48,7 @@ const Categories = () => {
           img={imgCanasta}
         ></Category>
         <Category
-          onClick={() => history.push("/catalog?Bidones")}
+          onClick={() => history.push("/catalog?Bidón")}
           title="Bidones"
           img={imgBidon}
         ></Category>

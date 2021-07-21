@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Filters from "../../Components/Catalog/Filters/Filters";
 import ItemDetail from "../../Components/Catalog/ItemDetail/ItemDetail";
 import Modal from "../../Components/UI/Modal/Modal";
@@ -16,7 +16,6 @@ const CatalogPage = () => {
   const [detail, setDetail] = useState(null);
   const [products, setProducts] = useState([]);
   const location = useLocation();
-  const history = useHistory();
 
   useEffect(() => {
     setCategoryFilter(location.search.slice(1));

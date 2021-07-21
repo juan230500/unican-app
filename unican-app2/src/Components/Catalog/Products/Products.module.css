@@ -9,5 +9,6 @@
 @media (max-width: 768px) {
   .Container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 4px 24px;
   }
 }

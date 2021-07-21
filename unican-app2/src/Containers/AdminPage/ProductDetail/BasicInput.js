@@ -10,7 +10,7 @@ const BasicInput = (props) => {
           onChange={(e) => props.onChange(e.target.value)}
         >
           {props.options.map((el) => (
-            <option>{el}</option>
+            <option value={el}>{el}</option>
           ))}
         </select>
       ) : (

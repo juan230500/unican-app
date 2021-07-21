@@ -13,14 +13,14 @@ body,
 
   --horizontalMargin: 80px;
   --navbarHeight: 100px;
-  --primmaryColor: #09416c;
+  --primmaryColor: #09416cbd;
   --primmaryColorOpacity: #09416cbd;
 }
 
 .App h1,
 h2,
 h3 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Playfair Display", sans-serif;
 }
 
 .App p,
@@ -34,5 +34,6 @@ textarea {
 @media (max-width: 768px) {
   .App * {
     --horizontalMargin: 12px;
+    --navbarHeight: 64px;
   }
 }

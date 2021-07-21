@@ -1,15 +1,31 @@
 .Container {
+  position: relative;
+
   display: inline-flex;
   flex-direction: column;
 
   border-radius: 8px;
-  height: 240px;
-  transition: all 0.25s ease-in;
+  min-height: 320px;
   cursor: pointer;
   background-image: var(--img);
   background-size: cover;
   background-position: bottom;
   overflow: hidden;
+
+  animation-name: example;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {
+    top: var(--initial-top);
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .SubContainer {
@@ -18,8 +34,7 @@
   justify-content: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
-  transition: all 0.5s ease-in;
-  height: 50px;
+  height: 48px;
 }
 
 .Container:hover {

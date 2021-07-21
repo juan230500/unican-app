@@ -15,14 +15,14 @@ import { ToastContainer } from "react-toastify";
 /**
  * TODO
  * *validación de forms [NO URGENTE]
- * *migrar a ec2 [HOY]
- * *sistema de copias de seguridad
+ * *sistema de copias de seguridad [NO URGENTE]
  * *manejo de errores de server del lado del cliente
  *
  * *popup de notificaciones [LISTO]
  * *administrador de categorías [OPCIONAL]
+ * *migrar a ec2 [LISTO]
  *
- * 5) animaciones [HOY]
+ * 5) animaciones
  * 6) revisar valores
  * 7) "su mejor socio en soluciones"
  * 8) "brindar soluciones de inyección"

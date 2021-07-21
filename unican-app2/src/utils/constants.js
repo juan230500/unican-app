@@ -29,4 +29,5 @@ export const LAYOUT = {
   marginHorizontal: "64px",
 };
 
-export const BASE_URL = "http://192.168.100.111:4000/";
+export const BASE_URL =
+  "https://100.25.205.91:4000/" || "http://192.168.100.111:4000/";

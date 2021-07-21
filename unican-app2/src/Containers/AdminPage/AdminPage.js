@@ -14,16 +14,21 @@ const AdminPage = () => {
   const [items, setItems] = useState([]);
   const [detail, setDetail] = useState(null);
 
-  const getProducts = async (reload = false) => {
+  const getProducts = async () => {
     const result = await axios.get(BASE_URL + "products");
-    if (reload) {
-      const currentItem = result.data.find((el) => el._id === detail._id);
-      setDetail(currentItem);
-    }
     setItems(result.data);
+    return result.data;
   };
 
-  useEffect(() => getProducts(), []);
+  const onReload = async () => {
+    const data = await getProducts();
+    const currentItem = data.find((el) => el._id === detail._id);
+    setDetail(currentItem);
+  };
+
+  useEffect(() => {
+    getProducts(false);
+  }, []);
 
   const newProduct = () => {
     setDetail({ title: "", category: "", info: [], imgs: [] });
@@ -95,7 +100,7 @@ const AdminPage = () => {
               modifyProduct={modifyProduct}
               createProduct={createProduct}
               deleteProduct={deleteProduct}
-              reload={() => getProducts(true)}
+              reload={onReload}
             />
           ) : (
             <ProductList items={items} setDetail={setDetail} />
