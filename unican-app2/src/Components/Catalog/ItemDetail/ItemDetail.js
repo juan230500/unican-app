@@ -29,13 +29,15 @@ const ItemDetail = (props) => {
           )}
         </div>
         <div className={classes.ImgColumn}>
-          {props.detail?.imgs.map((el, i) => (
-            <img
-              onClick={() => setImgIndex(i)}
-              alt="product"
-              src={el.link}
-            ></img>
-          ))}
+          {props.detail?.imgs.map((el, i) =>
+            i + 1 >= props.detail?.imgs.length ? null : (
+              <img
+                onClick={() => setImgIndex(i)}
+                alt="product"
+                src={el.link}
+              ></img>
+            )
+          )}
         </div>
       </div>
     </div>

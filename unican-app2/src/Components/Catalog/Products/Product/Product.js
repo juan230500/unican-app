@@ -7,7 +7,7 @@ const Category = (props) => {
 
   useEffect(() => {
     const imageLoader = new Image();
-    imageLoader.src = props.imgs[0].link;
+    imageLoader.src = props.imgs[props.imgs.length - 1]?.link || "";
     imageLoader.onload = () => setLoading(false);
   }, [props.imgs]);
 
@@ -26,7 +26,10 @@ const Category = (props) => {
           <SyncLoader></SyncLoader>
         </div>
       ) : (
-        <img src={props.imgs[0].link} alt="producto"></img>
+        <img
+          src={props.imgs[props.imgs.length - 1]?.link || ""}
+          alt="producto"
+        ></img>
       )}
     </div>
   );

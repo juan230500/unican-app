@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div className={classes.Header}>
       <div className={classes.Column}>
-        <h1>Industria de plásticos número 1 de centroamérica</h1>
+        <h1>Industria de plásticos Número 1 de Centroamérica</h1>
         <p>
           Nuestra visión es ser el mayor proveedor de contenedores plásticos
           para 2024
