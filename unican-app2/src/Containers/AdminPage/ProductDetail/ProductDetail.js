@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ProductDetail.module.css";
 import Button from "../../../Components/UI/Button/Button";
 import BasicInput from "./BasicInput";
@@ -7,9 +7,30 @@ import ImgsInput from "./ImgsInput/ImgsInput";
 import { customConfirm } from "../../../utils/constants";
 
 const ProductDetail = (props) => {
+  const [changed, setChanged] = useState(false);
+
   const onChange = (value, key) => {
     const newDetail = { ...props.detail };
     newDetail[key] = value;
+    props.setDetail(newDetail);
+    setChanged(true);
+  };
+
+  const onSwap = (i, j, key) => {
+    const newDetail = { ...props.detail };
+    console.log(i, j, key);
+    if (
+      i < 0 ||
+      j < 0 ||
+      newDetail[key].length < i ||
+      newDetail[key].length < j
+    )
+      return;
+    [newDetail[key][i], newDetail[key][j]] = [
+      newDetail[key][j],
+      newDetail[key][i],
+    ];
+    console.log(newDetail[key]);
     props.setDetail(newDetail);
   };
 
@@ -18,10 +39,12 @@ const ProductDetail = (props) => {
       <div className={classes.Row}>
         <Button
           onClick={() => {
-            customConfirm(
-              "¿Está seguro de salir sin guardar los cambios?",
-              props.setDetail
-            );
+            !changed
+              ? props.setDetail()
+              : customConfirm(
+                  "¿Está seguro de salir sin guardar los cambios?",
+                  props.setDetail
+                );
           }}
         >
           Cerrar
@@ -36,6 +59,9 @@ const ProductDetail = (props) => {
         )}
       </div>
       <div className={classes.Container}>
+        <div style={{ height: changed ? 32 : 0 }} className={classes.Alert}>
+          <strong>Hay cambios sin guardar</strong>
+        </div>
         <BasicInput
           value={props.detail.title}
           label="Nombre del producto"
@@ -56,6 +82,7 @@ const ProductDetail = (props) => {
           auth={props.auth}
           id={props.detail._id}
           value={props.detail.imgs}
+          onSwap={(i, j) => onSwap(i, j, "imgs")}
           label="Imágenes del producto"
           reload={props.reload}
         ></ImgsInput>

@@ -1,0 +1,13 @@
+.Videos {
+}
+
+.Videos * {
+  width: 50%;
+  margin-bottom: -5px;
+}
+
+@media (max-width: 768px) {
+  .Videos * {
+    width: 100%;
+  }
+}

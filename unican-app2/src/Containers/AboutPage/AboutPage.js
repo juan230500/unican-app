@@ -5,28 +5,36 @@ import aboutJson from "../../assets/about/about.json";
 
 const AboutPage = () => {
   const [index, setIndex] = useState(-1);
+
   return (
     <div className={classes.About}>
       <div className={classes.Column}>
-        {aboutJson.sections.map((el, i) => (
-          <Info
-            onExpand={() => setIndex(i === index ? -1 : i)}
-            expanded={index === i}
-            title={el.title}
-            text={el.text}
-          ></Info>
-        ))}
+        {aboutJson.group1.map((el, i) =>
+          el.level > 1 ? (
+            <h1>{el.title}</h1>
+          ) : (
+            <Info
+              onExpand={() => setIndex(i === index ? -1 : i)}
+              expanded={index === i}
+              {...el}
+              focus
+            ></Info>
+          )
+        )}
       </div>
       <div className={classes.Column}>
-        {aboutJson.sections.map((el, i) => (
+        {aboutJson.group1.map((el, i) => (
           <Info
-            style={{ position: "absolute", width: "100%", height: "100%" }}
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              opacity: index === i ? 1 : 0,
+            }}
             onExpand={() => setIndex(-1)}
             expanded={index !== i}
             showText={index === i}
-            title={el.title}
-            text={el.text}
-            certify={el.certify}
+            {...el}
           ></Info>
         ))}
       </div>

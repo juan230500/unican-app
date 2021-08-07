@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
-import { FaPlus, FaTrash } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaPlus, FaTrash } from "react-icons/fa";
 import { BASE_URL, customConfirm } from "../../../../utils/constants";
 import classes from "./ImgsInput.module.css";
 
 import { toast } from "react-toastify";
+import Button from "../../../../Components/UI/Button/Button";
 
 const ImgsInput = (props) => {
   const uploadImage = async (img) => {
@@ -45,15 +46,27 @@ const ImgsInput = (props) => {
     <div>
       <strong>{props.label}</strong>
       <div className={classes.Container}>
-        {props.value.map((el) => (
+        {props.value.map((el, i) => (
           <div className={classes.ImageItem}>
             <strong>Archivo: </strong>
             {el.name}
             <img className={classes.Image} src={el.link} alt="img"></img>
-            <FaTrash
-              style={{ cursor: "pointer", color: "red", marginLeft: "auto" }}
-              onClick={() => deleteImage(el.name)}
-            ></FaTrash>
+            <div>
+              <Button onClick={() => props.onSwap(i, i - 1)}>
+                <FaAngleLeft />
+              </Button>
+              <Button onClick={() => props.onSwap(i, i + 1)}>
+                <FaAngleRight />
+              </Button>
+              <Button>
+                <FaTrash
+                  style={{
+                    color: "red",
+                  }}
+                  onClick={() => deleteImage(el.name)}
+                ></FaTrash>
+              </Button>
+            </div>
           </div>
         ))}
         <div className={classes.ImageItem}>

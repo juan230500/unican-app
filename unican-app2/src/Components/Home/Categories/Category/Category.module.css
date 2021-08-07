@@ -1,22 +1,32 @@
 .Category {
-  flex: 1;
-  height: 340px;
-  background-size: cover;
-  background-position: bottom;
+  width: 50%;
+  height: 320px;
+  background-size: 100%;
+  background-position: center;
   cursor: pointer;
-  transition: all 0.25s ease-in;
-  opacity: 0.8;
-  margin: 0 2px;
+  transition: all 1s ease;
 }
 
 .Text {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
   color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Text:hover {
   background-color: var(--primmaryColor);
 }
 
 .Category:hover {
-  opacity: 1;
+  background-size: 120%;
+}
+
+@media (max-width: 768px) {
+  .Category {
+    width: 100%;
+    height: 240px;
+  }
 }

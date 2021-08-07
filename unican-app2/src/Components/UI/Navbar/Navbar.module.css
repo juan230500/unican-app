@@ -1,13 +1,16 @@
 .Nav {
   display: flex;
   padding: 0 var(--horizontalMargin);
-  height: var(--navbarHeight);
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   background-color: white;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+}
+
+.ImgContainer {
 }
 
 a {
@@ -16,28 +19,18 @@ a {
   text-align: center;
 }
 
-.Home {
-  display: inline-flex;
-  height: 100%;
-  overflow: hidden;
-}
-
-.Home img {
-  margin: auto 0;
-  margin-top: -24px;
-  height: 150%;
-  object-fit: cover;
-}
-
 .LinkContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  width: 130px;
+  min-height: 64px;
+  text-align: center;
 }
 
 .Group {
   display: flex;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .LinkContainer:hover,
@@ -49,15 +42,27 @@ a {
 }
 
 @media (max-width: 768px) {
-  .Home img {
-    margin-top: -12px;
+  .Nav {
+    flex-wrap: wrap;
+    height: 180px;
+  }
+
+  .ImgContainer {
+    width: 50%;
   }
 
   a {
     font-size: 14px;
   }
 
+  .Group {
+    width: 100%;
+    margin-top: -24px;
+    order: 99;
+  }
+
   .LinkContainer {
-    padding: 0 8px;
+    width: unset;
+    flex: 1;
   }
 }

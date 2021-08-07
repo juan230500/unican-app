@@ -18,7 +18,7 @@ const Category = (props) => {
       style={{ ...props.style, "--initial-top": Math.random() * 1000 + "px" }}
     >
       <div className={classes.SubContainer}>
-        <h1 className={classes.Title}>{props.title}</h1>
+        <h3 className={classes.Title}>{props.title}</h3>
       </div>
 
       {loading ? (
@@ -26,10 +26,12 @@ const Category = (props) => {
           <SyncLoader></SyncLoader>
         </div>
       ) : (
-        <img
-          src={props.imgs[props.imgs.length - 1]?.link || ""}
-          alt="producto"
-        ></img>
+        <div className={classes.ImageContainer}>
+          <img
+            src={props.imgs[props.imgs.length - 1]?.link || ""}
+            alt="producto"
+          ></img>
+        </div>
       )}
     </div>
   );

@@ -1,16 +1,27 @@
 .About {
   margin-top: var(--navbarHeight);
-  background-image: url("../../assets/home/WhatsApp\ Image\ 2021-07-20\ at\ 9.54.30\ PM\ \(8\).jpeg");
+  background-image: url("../../assets/home/2_DSC9786.jpg");
   background-size: cover;
   display: flex;
 }
 
 .Column {
-  width: 50%;
+  flex: 1;
+  color: white;
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
+.Column h1 {
+  width: 100%;
+  font-size: 32px;
+  background-color: var(--primmaryColor);
+  text-align: center;
+}
+
 @media (max-width: 768px) {
+  .Column h1 {
+    font-size: 24px;
+  }
 }

@@ -31,3 +31,15 @@ export const LAYOUT = {
 
 export const BASE_URL =
   "http://54.210.95.90:4000/" || "http://192.168.100.111:4000/";
+
+export const CATEGORIES = ["Cubetas", "Bidón", "Canastas", "Cajas"];
+
+export const COLORS_TAGS = {
+  rojo: "red",
+  azul: "blue",
+  blanco: "white",
+  natural: "#ECEAE4",
+  amarillo: "yellow",
+  verde: "green",
+  café: "brown",
+};

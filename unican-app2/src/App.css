@@ -20,7 +20,7 @@ body,
 .App h1,
 h2,
 h3 {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .App p,
@@ -34,6 +34,6 @@ textarea {
 @media (max-width: 768px) {
   .App * {
     --horizontalMargin: 12px;
-    --navbarHeight: 64px;
+    --navbarHeight: 180px;
   }
 }

@@ -1,14 +1,14 @@
 .Container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   margin: 16px 0;
-  gap: 16px 48px;
+  gap: 8px 48px;
   min-height: 480px;
 }
 
 @media (max-width: 768px) {
   .Container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 4px 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
   }
 }

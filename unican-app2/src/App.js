@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch, useLocation } from "react-router";
 import "./App.css";
 import Navbar from "./Components/UI/Navbar/Navbar";
-import HomePage from "./Containers/HomePage";
+import HomePage from "./Containers/HomePage/HomePage";
 import CatalogPage from "./Containers/CatalogPage/CatalogPage";
 import Footer from "./Components/UI/Footer/Footer";
 import AboutPage from "./Containers/AboutPage/AboutPage";

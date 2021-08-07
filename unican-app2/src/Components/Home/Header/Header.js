@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classes from "./Header.module.css";
 
 const Header = () => {
   const [index, setIndex] = useState(0);
   const [images, setImages] = useState([]);
+  const intervalId = useRef();
 
   useEffect(() => getImages(), []);
 
@@ -22,34 +23,38 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setIndex((i) => i + 1);
-    }, 6000);
-    return () => clearInterval(id);
-  }, [images]);
+    intervalId.current = setTimeout(() => {
+      setIndex((i) => (i > images.length - 2 ? 0 : i + 1));
+    }, 4500);
+    return () => clearTimeout(intervalId.current);
+  }, [images, index]);
 
   return (
     <div className={classes.Header}>
       <div className={classes.Column}>
-        <h1>Industria de plásticos Número 1 de Centroamérica</h1>
-        <p>
-          Nuestra visión es ser el mayor proveedor de contenedores plásticos
-          para 2024
-        </p>
+        <h1>Su mejor Socio Comercial</h1>
+        <p>En soluciones de empaques plásticos de Inyección Alta</p>
       </div>
+      <div className={classes.ColumnRight}>
+        {images.map((_, i) => (
+          <div
+            onClick={() => setIndex(i)}
+            className={[classes.Ball, i === index ? classes.Active : ""].join(
+              " "
+            )}
+          ></div>
+        ))}
+      </div>
+
       <div className={classes.Album}>
         {images.map((el, i) => (
           <img
             style={{
-              left:
-                i === index % images.length
-                  ? "0"
-                  : i >= index % images.length
-                  ? "99.999%"
-                  : "-100%",
+              left: i === index ? "0" : i >= index ? "99.999%" : "-100%",
+              opacity: i === index ? 1 : 0,
             }}
             src={el}
-            alt=""
+            alt={el}
           ></img>
         ))}
       </div>

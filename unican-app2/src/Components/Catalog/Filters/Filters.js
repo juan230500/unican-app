@@ -1,7 +1,6 @@
+import { CATEGORIES } from "../../../utils/constants";
 import Input from "../../UI/Input/Input";
 import classes from "./Filters.module.css";
-
-const CATEGORIES = ["Cubetas", "Bidón", "Canastas", "Cajas"];
 
 const Filters = (props) => {
   return (

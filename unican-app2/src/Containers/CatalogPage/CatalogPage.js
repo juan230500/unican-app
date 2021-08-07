@@ -45,7 +45,12 @@ const CatalogPage = () => {
   return (
     <div className={classes.Container}>
       <Modal onClose={() => setDetail(null)} show={detail}>
-        {detail && <ItemDetail detail={detail}></ItemDetail>}
+        {detail && (
+          <ItemDetail
+            onClose={() => setDetail(null)}
+            detail={detail}
+          ></ItemDetail>
+        )}
       </Modal>
       <h1>Nuestros productos</h1>
       <Filters

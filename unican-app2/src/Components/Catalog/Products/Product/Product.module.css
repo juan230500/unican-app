@@ -13,7 +13,7 @@
   overflow: hidden;
 
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -47,7 +47,7 @@
 
 .Title {
   text-align: center;
-  font-size: 1rem;
+  font-size: 16px;
   color: white;
 }
 
@@ -56,4 +56,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ImageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImageContainer img {
+  width: 100%;
 }
