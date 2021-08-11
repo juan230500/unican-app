@@ -8,16 +8,7 @@ const Navbar = (props) => {
   return (
     <nav className={classes.Nav}>
       <NavLink to="/" exact className={classes.ImgContainer}>
-        <img
-          style={{
-            height: 160,
-            minWidth: 160,
-            maxWidth: "100%",
-            marginTop: -24,
-          }}
-          alt="logo"
-          src={logo}
-        ></img>
+        <img alt="logo" src={logo}></img>
       </NavLink>
       <div className={classes.Group}>
         <NavLink
@@ -56,11 +47,7 @@ const Navbar = (props) => {
         rel="noreferrer"
         className={classes.ImgContainer}
       >
-        <img
-          style={{ height: 100, minWidth: 160, maxWidth: "100%" }}
-          alt="logo"
-          src={logoComeca}
-        ></img>
+        <img alt="logo" src={logoComeca}></img>
       </a>
     </nav>
   );

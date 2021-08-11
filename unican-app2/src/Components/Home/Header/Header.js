@@ -15,11 +15,10 @@ const Header = () => {
         .map(r)
         .map((el) => el.default);
     }
-    setImages(
-      importAll(
-        require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
-      )
+    const tmpImages = importAll(
+      require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
     );
+    setImages(tmpImages);
   };
 
   useEffect(() => {
@@ -45,12 +44,11 @@ const Header = () => {
           ></div>
         ))}
       </div>
-
       <div className={classes.Album}>
         {images.map((el, i) => (
           <img
             style={{
-              left: i === index ? "0" : i >= index ? "99.999%" : "-100%",
+              left: i === index ? "0" : i >= index ? "99.9999%" : "-100%",
               opacity: i === index ? 1 : 0,
             }}
             src={el}

@@ -11,6 +11,11 @@
 }
 
 .ImgContainer {
+  height: 100px;
+}
+
+.ImgContainer img {
+  height: 100%;
 }
 
 a {

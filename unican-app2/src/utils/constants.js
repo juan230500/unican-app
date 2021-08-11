@@ -30,7 +30,7 @@ export const LAYOUT = {
 };
 
 export const BASE_URL =
-  "http://54.210.95.90:4000/" || "http://192.168.100.111:4000/";
+  "https://unicancr.com/api/" || "http://192.168.100.111:4000/";
 
 export const CATEGORIES = ["Cubetas", "Bidón", "Canastas", "Cajas"];
 
