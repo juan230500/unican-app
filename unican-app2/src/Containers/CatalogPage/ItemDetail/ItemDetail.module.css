@@ -91,12 +91,13 @@
 }
 
 .Row {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
 
 .Row div {
-  width: 120px;
+  width: 33%;
   height: 120px;
   cursor: pointer;
   border: 1px solid #eee;

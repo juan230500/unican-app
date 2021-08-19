@@ -14,13 +14,12 @@ const Category = (props) => {
   return (
     <div
       onClick={props.onClick}
-      className={[classes.Container, props.className].join(" ")}
+      className={classes.Container}
       style={{ ...props.style, "--initial-top": Math.random() * 1000 + "px" }}
     >
       <div className={classes.SubContainer}>
-        <h3 className={classes.Title}>{props.title}</h3>
+        <h3>{props.title}</h3>
       </div>
-
       {loading ? (
         <div className={classes.ImageLoading}>
           <SyncLoader></SyncLoader>

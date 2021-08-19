@@ -17,13 +17,13 @@ body,
   --primmaryColorOpacity: #09416cbd;
 }
 
-.App h1,
+h1,
 h2,
 h3 {
   font-family: "Arial", sans-serif;
 }
 
-.App p,
+p,
 a,
 button,
 input,

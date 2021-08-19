@@ -1,5 +1,5 @@
 import { CATEGORIES } from "../../../utils/constants";
-import Input from "../../UI/Input/Input";
+import Input from "../../../Components/UI/Input/Input";
 import classes from "./Filters.module.css";
 
 const Filters = (props) => {

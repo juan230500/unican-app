@@ -9,12 +9,11 @@ const Header = () => {
   useEffect(() => getImages(), []);
 
   const getImages = async () => {
-    function importAll(r) {
-      return r
+    const importAll = (r) =>
+      r
         .keys()
         .map(r)
         .map((el) => el.default);
-    }
     const tmpImages = importAll(
       require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
     );
@@ -22,9 +21,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    intervalId.current = setTimeout(() => {
-      setIndex((i) => (i > images.length - 2 ? 0 : i + 1));
-    }, 4500);
+    intervalId.current = setTimeout(
+      () => setIndex((i) => (i > images.length - 2 ? 0 : i + 1)),
+      4500
+    );
     return () => clearTimeout(intervalId.current);
   }, [images, index]);
 

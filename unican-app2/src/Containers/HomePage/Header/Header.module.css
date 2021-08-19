@@ -1,7 +1,6 @@
 .Header {
   margin-top: var(--navbarHeight);
   height: 480px;
-  display: flex;
   position: relative;
   margin-bottom: 80px;
 }
@@ -23,8 +22,8 @@
 }
 
 .Album {
-  flex: 1;
-  display: flex;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
   position: relative;
   background-color: white;
@@ -36,7 +35,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   transition: left 0.75s ease, opacity 2.5s ease;
 }
 
@@ -46,10 +44,10 @@
   right: 0;
   bottom: -20px;
   z-index: 10;
+  gap: 12px;
 }
 
 .Ball {
-  margin: 0 8px;
   border-radius: 80px;
   height: 10px;
   width: 10px;
@@ -58,38 +56,32 @@
 }
 
 .Active {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
 }
 
-.Ball:hover {
-  transform: scale(1.1);
-}
 @media (max-width: 768px) {
   .Column {
-    background-color: var(--primmaryColorOpacity);
-    border-radius: 0 160px 160px 0;
+    border-radius: 0;
     width: 100%;
-    padding: 24px;
-    color: white;
-    position: absolute;
-    bottom: -64px;
-    left: 0;
-    z-index: 1;
+  }
+
+  .Column h1 {
+    font-size: 24px;
+  }
+
+  .Column p {
+    font-size: 16px;
   }
 
   .Header {
     height: 360px;
   }
 
-  .Column h1 {
-    font-size: 1.5rem;
-  }
-
-  .Column p {
-    font-size: 1rem;
-  }
-
-  .Ball {
-    display: none;
+  .ColumnRight {
+    top: 20px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    bottom: unset;
   }
 }

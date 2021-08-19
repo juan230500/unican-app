@@ -1,16 +1,16 @@
 import { Redirect, Route, Switch, useLocation } from "react-router";
+import { useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
+
 import Navbar from "./Components/UI/Navbar/Navbar";
 import HomePage from "./Containers/HomePage/HomePage";
 import CatalogPage from "./Containers/CatalogPage/CatalogPage";
 import Footer from "./Components/UI/Footer/Footer";
 import AboutPage from "./Containers/AboutPage/AboutPage";
-import { useEffect } from "react";
 import ContactPage from "./Containers/ContactPage/ContactPage";
 import AdminPage from "./Containers/AdminPage/AdminPage";
-
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
 
 /**
  * TODO
@@ -40,26 +40,26 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="App" onScroll={(e) => console.log(e.target)}>
+    <div className="App">
       <ToastContainer />
-      <Navbar></Navbar>
+      <Navbar />
       <Switch>
         <Route path="/" exact>
-          <HomePage></HomePage>
+          <HomePage />
         </Route>
         <Route path="/catalog">
-          <CatalogPage></CatalogPage>
+          <CatalogPage />
         </Route>
         <Route path="/about">
-          <AboutPage></AboutPage>
+          <AboutPage />
         </Route>
         <Route path="/contact">
-          <ContactPage></ContactPage>
+          <ContactPage />
         </Route>
         <Route path="/admin">
-          <AdminPage></AdminPage>
+          <AdminPage />
         </Route>
-        <Redirect to="/"></Redirect>
+        <Redirect to="/" />
       </Switch>
       <Footer />
     </div>

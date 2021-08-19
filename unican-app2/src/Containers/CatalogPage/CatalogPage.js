@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Filters from "../../Components/Catalog/Filters/Filters";
-import ItemDetail from "../../Components/Catalog/ItemDetail/ItemDetail";
-import Modal from "../../Components/UI/Modal/Modal";
-import Products from "../../Components/Catalog/Products/Products";
+import axios from "axios";
 import classes from "./CatalogPage.module.css";
 import productsJson from "../../assets/products.json";
 
-import axios from "axios";
 import { BASE_URL } from "../../utils/constants";
+import Filters from "./Filters/Filters";
+import ItemDetail from "./ItemDetail/ItemDetail";
+import Modal from "../../Components/UI/Modal/Modal";
+import Products from "./Products/Products";
 
 const CatalogPage = () => {
   const [nameFilter, setNameFilter] = useState("");

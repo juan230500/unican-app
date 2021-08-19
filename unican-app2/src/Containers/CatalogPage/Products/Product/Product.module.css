@@ -5,11 +5,8 @@
   flex-direction: column;
 
   border-radius: 8px;
-  min-height: 320px;
+  height: 320px;
   cursor: pointer;
-  background-image: var(--img);
-  background-size: cover;
-  background-position: bottom;
   overflow: hidden;
 
   animation-name: example;
@@ -35,20 +32,14 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.7);
   height: 48px;
-}
 
-.Container:hover {
-  border-color: var(--primmaryColor);
+  font-size: 16px;
+  color: white;
+  text-align: center;
 }
 
 .Container:hover .SubContainer {
   background-color: var(--primmaryColor);
-}
-
-.Title {
-  text-align: center;
-  font-size: 16px;
-  color: white;
 }
 
 .ImageLoading {

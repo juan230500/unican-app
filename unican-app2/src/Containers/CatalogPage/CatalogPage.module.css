@@ -3,10 +3,8 @@
   margin-top: var(--navbarHeight);
   display: flex;
   flex-direction: column;
+  padding: 32px 0;
 }
 
 @media (max-width: 768px) {
-  .Row {
-    flex-direction: column;
-  }
 }
