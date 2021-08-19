@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 const auth = require("basic-auth");
+const bodyParser = require("body-parser");
 const AWS = require("aws-sdk");
 
 const initialize = require("./initialize");
@@ -16,7 +17,8 @@ mongoose.connect(process.env.MONGO_URL, {
   useUnifiedTopology: true,
 });
 
-app.use(express.bodyParser({ limit: "50mb" }));
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(express.json());
 
