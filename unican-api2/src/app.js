@@ -8,6 +8,8 @@ const AWS = require("aws-sdk");
 
 const initialize = require("./initialize");
 const products = require("./products");
+const categories = require("./categories");
+const contact = require("./contact");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -70,6 +72,8 @@ app.post("/admin/login", authorize, (req, res) => {
 });
 
 app.use("/products", authorize, products);
+app.use("/categories", authorize, categories);
+app.use("/contact", authorize, contact);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

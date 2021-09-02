@@ -58,4 +58,5 @@
 
 .ImageContainer img {
   width: 100%;
+  max-height: 272px;
 }

@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./ContactPage.module.css";
 import maps from "../../assets/maps.png";
 import Input from "../../Components/UI/Input/Input";
 import Button from "../../Components/UI/Button/Button";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { BASE_URL } from "../../utils/constants";
 
 const ContactPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [emailTo, setEmailTo] = useState("");
+
+  const get = async () => {
+    const res = await axios.get(BASE_URL + "contact");
+    setEmailTo(res.data.email);
+  };
+
+  useEffect(() => {
+    get();
+  }, []);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -32,10 +44,11 @@ const ContactPage = () => {
     }
 
     toast.info("Su mensaje se está enviando ...");
+    console.log({ email, number, message, name, emailTo });
     const response = await emailjs.send(
       "service_xnpmyw9",
       "template_qv5bnci",
-      { email, number, message, name },
+      { email, number, message, name, emailTo },
       "user_UtSFLEkq4Af17dvGTQisN"
     );
     if (response.status === 200)

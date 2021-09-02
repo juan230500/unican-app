@@ -1,4 +1,3 @@
-import { CATEGORIES } from "../../../utils/constants";
 import Input from "../../../Components/UI/Input/Input";
 import classes from "./Filters.module.css";
 
@@ -11,7 +10,7 @@ const Filters = (props) => {
       </div>
       <div className={classes.Column}>
         <h3>Buscar por categoría</h3>
-        {CATEGORIES.map((el, i) => (
+        {props.categories.map((el, i) => (
           <span
             onClick={() =>
               el === props.categoryFilter

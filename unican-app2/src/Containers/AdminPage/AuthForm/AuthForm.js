@@ -6,10 +6,12 @@ import { BASE_URL } from "../../../utils/constants";
 import classes from "./AuthForm.module.css";
 
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 
 const AuthForm = (props) => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const verify = async (e) => {
     e.preventDefault();
@@ -17,8 +19,10 @@ const AuthForm = (props) => {
       await axios.post(BASE_URL + "admin/login/", null, {
         headers: { Authorization: "Basic " + btoa(`${user}:${password}`) },
       });
+      console.log("Basic " + btoa(`${user}:${password}`));
       props.setAuth("Basic " + btoa(`${user}:${password}`));
       toast.info("¡Bienvenido al administrador de productos!");
+      history.push("/admin/products");
     } catch (error) {
       console.log("aaa");
       toast.error("Nombre o contraseña inválido");

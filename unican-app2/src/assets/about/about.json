@@ -5,14 +5,16 @@
       "level": 2
     },
     {
-      "title": "Historia",
-      "text": "UNICAN (Envases Comeca S.A. División Plástico), es una empresa perteneciente al Grupo Comeca, de capital costarricense. Inició operaciones el 03 de Abril de 1995 brindando soluciones de empaque plástico Rígido, para satisfacer las necesidades de clientes y consumidores. Además, en armonía y conscientes con el medio ambiente, nos certificamos como gestores de residuos, procesando e integrando resinas recicladas, incorporándolas a los productos que así lo permiten. Las instalaciones se encuentran ubicadas en Cinco Esquinas de Tibás, San José-Costa Rica. Actualmente vende sus productos en el mercado Nacional, Centroamérica y el Caribe.",
-      "level": 1
+      "title": "",
+      "text": "En armonía y conscientes de nuestro rol con el **M**edio **A**mbiente, nos certificamos como **G**estores de **R**esiduos. \nProcesamos e integramos **R**esinas **R**ecicladas, incorporándolas a los productos que así lo permiten, colaborando de esta forma a la disposición ecológica de estos residuos valorizables.",
+      "level": 1,
+      "green": 1
     },
     {
-      "title": "¿Quiénes somos?",
-      "text": "Somos una empresa costarricense dedicada a la manufactura y comercialización de envases plásticos inyectados y soplados, para ser utilizados en contener pintura, revestimientos, adhesivos, alimentos y bebidas.",
-      "level": 1
+      "title": "",
+      "text": "## ¿Quiénes somos?\nSomos una empresa costarricense dedicada a la manufactura y comercialización de envases plásticos inyectados y soplados, para ser utilizados en contener pintura, revestimientos, adhesivos, alimentos y bebidas.\n## HISTORIA\nUNICAN (Envases Comeca S.A. División Plástico), es una empresa perteneciente al Grupo Comeca, de capital costarricense. Inició operaciones el 03 de Abril de 1995 brindando soluciones de empaque plástico Rígido, para satisfacer las necesidades de clientes y consumidores.\nLas instalaciones se encuentran ubicadas en Cinco Esquinas de Tibás, San José-Costa Rica. Actualmente vende sus productos en el mercado Nacional, Centroamérica y el Caribe.",
+      "level": 1,
+      "special": 1
     },
     {
       "title": "Misión",

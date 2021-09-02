@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import classes from "./ProductDetail.module.css";
-import Button from "../../../Components/UI/Button/Button";
+import Button from "../../../../Components/UI/Button/Button";
 import BasicInput from "./BasicInput";
 import InfoInput from "./InfoInput/InfoInput";
 import ImgsInput from "./ImgsInput/ImgsInput";
-import { customConfirm } from "../../../utils/constants";
+import { customConfirm } from "../../../../utils/constants";
 
 const ProductDetail = (props) => {
   const [changed, setChanged] = useState(false);
@@ -22,8 +22,8 @@ const ProductDetail = (props) => {
     if (
       i < 0 ||
       j < 0 ||
-      newDetail[key].length < i ||
-      newDetail[key].length < j
+      newDetail[key].length - 1 < i ||
+      newDetail[key].length - 1 < j
     )
       return;
     [newDetail[key][i], newDetail[key][j]] = [
@@ -70,7 +70,7 @@ const ProductDetail = (props) => {
         <BasicInput
           value={props.detail.category}
           label="Categoría del producto"
-          options={["Cubetas", "Canastas", "Cajas", "Bidón"]}
+          options={props.options}
           onChange={(v) => onChange(v, "category")}
         ></BasicInput>
         <InfoInput

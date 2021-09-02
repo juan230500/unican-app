@@ -29,13 +29,29 @@
   background-color: white;
 }
 
-.Album img {
+.ImgContainer {
   top: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   transition: left 0.75s ease, opacity 2.5s ease;
+}
+
+.Img {
+  position: absolute;
+  width: 90%;
+  margin: 0 5%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+}
+
+.BgImg {
+  margin: 0;
+  width: 100%;
+  z-index: 3;
+  filter: blur(5px);
+  object-fit: cover;
 }
 
 .ColumnRight {
@@ -63,6 +79,10 @@
   .Column {
     border-radius: 0;
     width: 100%;
+  }
+
+  .Img {
+    object-fit: cover;
   }
 
   .Column h1 {

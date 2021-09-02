@@ -46,14 +46,25 @@ const Header = () => {
       </div>
       <div className={classes.Album}>
         {images.map((el, i) => (
-          <img
+          <div
+            className={classes.ImgContainer}
             style={{
               left: i === index ? "0" : i >= index ? "99.9999%" : "-100%",
               opacity: i === index ? 1 : 0,
             }}
-            src={el}
-            alt={el}
-          ></img>
+          >
+            <img
+              className={classes.Img}
+              style={{ objectPosition: 4 > i && i > 1 ? "bottom" : "center" }}
+              src={el}
+              alt={el}
+            ></img>
+            <img
+              className={[classes.Img, classes.BgImg].join(" ")}
+              src={el}
+              alt={el}
+            ></img>
+          </div>
         ))}
       </div>
     </div>

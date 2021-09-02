@@ -40,28 +40,30 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="App">
+    <div>
       <ToastContainer />
-      <Navbar />
-      <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
-        <Route path="/catalog">
-          <CatalogPage />
-        </Route>
-        <Route path="/about">
-          <AboutPage />
-        </Route>
-        <Route path="/contact">
-          <ContactPage />
-        </Route>
-        <Route path="/admin">
-          <AdminPage />
-        </Route>
-        <Redirect to="/" />
-      </Switch>
-      <Footer />
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/catalog">
+            <CatalogPage />
+          </Route>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+          </Route>
+          <Route path="/admin">
+            <AdminPage />
+          </Route>
+          <Redirect to="/" />
+        </Switch>
+        <Footer />
+      </div>
     </div>
   );
 }

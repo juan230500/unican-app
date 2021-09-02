@@ -22,14 +22,16 @@ const productSchema = new Schema({
 
 const productModel = mongoose.model("Product", productSchema);
 
-const userSchema = new Schema({
-  name: String,
-  password: String,
-});
+const categorySchema = new Schema({ name: String });
 
-const userModel = mongoose.model("User", userSchema);
+const categoryModel = mongoose.model("Category", categorySchema);
+
+const contactSchema = new Schema({ email: String });
+
+const contactModel = mongoose.model("Contact", contactSchema);
 
 module.exports = {
   productModel,
-  userModel,
+  categoryModel,
+  contactModel,
 };

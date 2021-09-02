@@ -1,16 +1,16 @@
 .Admin {
-  margin-top: 160px;
+  margin-top: var(--navbarHeight);
   margin-bottom: 100px;
   padding: 0 var(--horizontalMargin);
+  padding-top: 32px;
 }
 
-.Row {
+.Links {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 }
 
-.Data {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.Links a {
+  color: blue;
+  text-decoration: underline;
 }

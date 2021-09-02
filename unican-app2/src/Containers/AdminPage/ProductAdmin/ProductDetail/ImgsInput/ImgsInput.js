@@ -1,11 +1,11 @@
 import axios from "axios";
 import React from "react";
 import { FaAngleLeft, FaAngleRight, FaPlus, FaTrash } from "react-icons/fa";
-import { BASE_URL, customConfirm } from "../../../../utils/constants";
+import { BASE_URL, customConfirm } from "../../../../../utils/constants";
 import classes from "./ImgsInput.module.css";
 
 import { toast } from "react-toastify";
-import Button from "../../../../Components/UI/Button/Button";
+import Button from "../../../../../Components/UI/Button/Button";
 
 const ImgsInput = (props) => {
   const uploadImage = async (img) => {
@@ -37,7 +37,7 @@ const ImgsInput = (props) => {
         }
       );
       toast.dismiss(toastId);
-      toast.success(`La imagen ${imgName} se ha eliminada correctamente`);
+      toast.success(`La imagen ${imgName} se ha eliminado correctamente`);
       props.reload();
     });
   };
@@ -47,8 +47,14 @@ const ImgsInput = (props) => {
       <strong>{props.label}</strong>
       <div className={classes.Container}>
         {props.value.map((el, i) => (
-          <div className={classes.ImageItem}>
-            <strong>Archivo: </strong>
+          <div
+            className={classes.ImageItem}
+            style={{ borderWidth: i === props.value.length - 1 ? 5 : 1 }}
+          >
+            {i === props.value.length - 1 ? (
+              <div className={classes.Portada}>Imagen de portada</div>
+            ) : null}
+            <strong>Archivo:</strong>
             {el.name}
             <img className={classes.Image} src={el.link} alt="img"></img>
             <div>

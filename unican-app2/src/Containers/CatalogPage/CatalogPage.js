@@ -15,6 +15,7 @@ const CatalogPage = () => {
   const [categoryFilter, setCategoryFilter] = useState(null);
   const [detail, setDetail] = useState(null);
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,6 +30,9 @@ const CatalogPage = () => {
         console.log(e);
         setProducts(productsJson);
       });
+
+    const result2 = await axios.get(BASE_URL + "categories");
+    setCategories(result2.data.map((el) => el.name));
   };
 
   useEffect(() => {
@@ -57,8 +61,13 @@ const CatalogPage = () => {
         setNameFilter={setNameFilter}
         setCategoryFilter={setCategoryFilter}
         categoryFilter={categoryFilter}
+        categories={categories}
       />
-      <Products products={filterProducts(products)} setDetail={setDetail} />
+      <Products
+        categories={categories}
+        products={filterProducts(products)}
+        setDetail={setDetail}
+      />
     </div>
   );
 };

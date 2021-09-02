@@ -1,0 +1,32 @@
+.Container {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  margin-bottom: 160px;
+}
+
+.Btns {
+  display: flex;
+  gap: 8px;
+}
+
+.Category {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.Category svg {
+  cursor: pointer;
+}
+.Category input {
+  width: 320px;
+  font-size: 18px;
+  padding: 0 8px;
+  border: none;
+  border-bottom: 1px solid black;
+}

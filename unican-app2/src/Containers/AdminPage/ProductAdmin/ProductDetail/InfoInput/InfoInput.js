@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPlus, FaTrash } from "react-icons/fa";
-import { customConfirm } from "../../../../utils/constants";
+import { customConfirm } from "../../../../../utils/constants";
 import classes from "./InfoInput.module.css";
 
 const InfoInput = (props) => {
