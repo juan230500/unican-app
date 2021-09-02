@@ -1,1 +1,2 @@
-asdasd
+sudo ssh -i ~/Downloads/juan.pem ubuntu@ec2-54-196-37-43.compute-1.amazonaws.com
+sudo scp -r -i ~/Downloads/juan.pem build ubuntu@ec2-54-196-37-43.compute-1.amazonaws.com:~/unican-app/unican-app2
