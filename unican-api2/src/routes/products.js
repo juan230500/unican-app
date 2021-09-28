@@ -1,4 +1,4 @@
-const { productModel } = require("./schemas");
+const { productModel } = require("../schemas");
 const router = require("express").Router();
 const fs = require("fs");
 

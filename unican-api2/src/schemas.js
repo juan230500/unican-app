@@ -30,8 +30,18 @@ const contactSchema = new Schema({ email: String });
 
 const contactModel = mongoose.model("Contact", contactSchema);
 
+const homeSchema = new Schema({
+  title: String,
+  subtitle: String,
+  imgs: [String],
+  vids: [String],
+});
+
+const homeModel = mongoose.model("Home", homeSchema);
+
 module.exports = {
   productModel,
   categoryModel,
   contactModel,
+  homeModel,
 };

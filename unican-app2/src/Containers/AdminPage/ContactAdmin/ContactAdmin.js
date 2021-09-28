@@ -17,7 +17,7 @@ const ContactAdmin = (props) => {
   const get = async () => {
     const res = await axios.get(BASE_URL + "contact");
     console.log(res.data);
-    setEmail(res.data);
+    setEmail(res.data || "");
     res.status === 200
       ? toast.success("Actualización existosa")
       : toast.error("Actualización no realizada");

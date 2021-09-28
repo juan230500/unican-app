@@ -1,0 +1,55 @@
+.Container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+}
+
+.Btns {
+  display: flex;
+  gap: 8px;
+}
+
+.Category {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.Category svg {
+  cursor: pointer;
+}
+
+.Category input {
+  width: 240px;
+  font-size: 18px;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.Item {
+  border-radius: 8px;
+  padding: 8px;
+  max-width: 360px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.Item img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 240px;
+}
+
+.Item svg {
+  cursor: pointer;
+}

@@ -4,6 +4,7 @@ import classes from "./AdminPage.module.css";
 import AuthForm from "./AuthForm/AuthForm";
 import CategoryAdmin from "./CategoryAdmin/CategoryAdmin";
 import ContactAdmin from "./ContactAdmin/ContactAdmin";
+import HomeAdmin from "./HomeAdmin/HomeAdmin";
 import ProductAdmin from "./ProductAdmin/ProductAdmin";
 
 const AdminPage = () => {
@@ -19,6 +20,7 @@ const AdminPage = () => {
             <Link to="/admin/products">Productos</Link>
             <Link to="/admin/categories">Categorías</Link>
             <Link to="/admin/contact">Contacto</Link>
+            <Link to="/admin/home">Inicio</Link>
           </div>
           <Switch>
             <Route path="/admin/products">
@@ -29,6 +31,9 @@ const AdminPage = () => {
             </Route>
             <Route path="/admin/contact">
               <ContactAdmin auth={auth} />
+            </Route>
+            <Route path="/admin/home">
+              <HomeAdmin auth={auth} />
             </Route>
           </Switch>
         </div>

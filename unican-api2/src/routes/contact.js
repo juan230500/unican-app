@@ -1,4 +1,4 @@
-const { contactModel } = require("./schemas");
+const { contactModel } = require("../schemas");
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {
