@@ -1,41 +1,44 @@
+import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
+import { BASE_URL } from "../../../utils/constants";
 import classes from "./Header.module.css";
 
 const Header = () => {
   const [index, setIndex] = useState(0);
-  const [images, setImages] = useState([]);
   const intervalId = useRef();
+  const [homeData, setHomeData] = useState({
+    title: "",
+    subtitle: "",
+    imgs: [],
+    vids: [],
+  });
 
-  useEffect(() => getImages(), []);
-
-  const getImages = async () => {
-    const importAll = (r) =>
-      r
-        .keys()
-        .map(r)
-        .map((el) => el.default);
-    const tmpImages = importAll(
-      require.context("../../../assets/home", false, /\.(png|jpe?g|svg)$/)
-    );
-    setImages(tmpImages);
+  const get = async () => {
+    const res = await axios.get(BASE_URL + "home");
+    res.data && setHomeData(res.data);
   };
+
+  useEffect(() => get(), []);
 
   useEffect(() => {
     intervalId.current = setTimeout(
-      () => setIndex((i) => (i > images.length - 2 ? 0 : i + 1)),
+      () => setIndex((i) => (i > homeData.imgs.length - 2 ? 0 : i + 1)),
       4500
     );
     return () => clearTimeout(intervalId.current);
-  }, [images, index]);
+  }, [homeData.imgs, index]);
+
+  //Su mejor Socio Comercial
+  //En soluciones de empaques plásticos de Inyección Alta
 
   return (
     <div className={classes.Header}>
       <div className={classes.Column}>
-        <h1>Su mejor Socio Comercial</h1>
-        <p>En soluciones de empaques plásticos de Inyección Alta</p>
+        <h1>{homeData.title}</h1>
+        <p>{homeData.title}</p>
       </div>
       <div className={classes.ColumnRight}>
-        {images.map((_, i) => (
+        {homeData.imgs.map((_, i) => (
           <div
             onClick={() => setIndex(i)}
             className={[classes.Ball, i === index ? classes.Active : ""].join(
@@ -45,7 +48,7 @@ const Header = () => {
         ))}
       </div>
       <div className={classes.Album}>
-        {images.map((el, i) => (
+        {homeData.imgs.map((el, i) => (
           <div
             className={classes.ImgContainer}
             style={{

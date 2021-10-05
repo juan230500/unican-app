@@ -73,4 +73,47 @@ router.delete("/img/:index", async (req, res) => {
   });
 });
 
+router.post("/vid/", upload.single("newImage"), async (req, res) => {
+  const home = await homeModel.findOne({});
+  const s3 = new AWS.S3({
+    accessKeyId: ID,
+    secretAccessKey: SECRET,
+  });
+  const path = "home/" + req.file.filename;
+  const params = {
+    ACL: "public-read",
+    Bucket: BUCKET_NAME,
+    Key: path,
+    Body: fs.createReadStream(req.file.path),
+  };
+  s3.upload(params, async (err, data) => {
+    if (err) {
+      throw err;
+    }
+    home.vids.push(data.Location);
+    await home.save((err) => err && console.log(err));
+    console.log(`File uploaded successfully. ${data.Location}`);
+    res.json(home);
+  });
+});
+
+router.delete("/vid/:index", async (req, res) => {
+  const home = await homeModel.findOne({});
+  const s3 = new AWS.S3({
+    accessKeyId: ID,
+    secretAccessKey: SECRET,
+  });
+  const params = {
+    Bucket: BUCKET_NAME,
+    Key: "home/" + req.query.imgName,
+  };
+  s3.deleteObject(params, async (err, data) => {
+    if (err) throw err;
+    home.vids.splice(req.params.index, 1);
+    await home.save((err) => err && console.log(err));
+    console.log(`File deleted successfully.`);
+    res.json(home);
+  });
+});
+
 module.exports = router;

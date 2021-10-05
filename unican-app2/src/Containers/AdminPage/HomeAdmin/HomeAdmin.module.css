@@ -35,16 +35,17 @@
 .Item {
   border-radius: 8px;
   padding: 8px;
-  max-width: 360px;
+  max-width: 240px;
   border: 1px solid #ccc;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 4px;
 }
 
-.Item img {
+.Item img,
+.Item video {
   width: 100%;
   object-fit: cover;
   max-height: 240px;
