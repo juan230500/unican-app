@@ -35,7 +35,6 @@ const HomeAdmin = (props) => {
   };
 
   const save = async () => {
-    console.log(homeData);
     const res = await axios.post(BASE_URL + "home", homeData, {
       headers: { Authorization: props.auth },
     });
@@ -119,8 +118,9 @@ const HomeAdmin = (props) => {
     setHomeData(newHomeData);
   };
 
-  const swapVideo = (i, n) => {
-    if (i + n < 0 || i + n > homeData.imgs.length - 1) return;
+  const swapVideo = async (i, n) => {
+    if (i + n < 0 || i + n > homeData.vids.length - 1) return;
+    console.log(i, n);
     const newHomeData = { ...homeData };
     const newItems = [...newHomeData.vids];
     [newItems[i], newItems[i + n]] = [newItems[i + n], newItems[i]];
@@ -142,6 +142,14 @@ const HomeAdmin = (props) => {
     const newHomeData = { ...homeData };
     newHomeData[key] = value;
     setHomeData(newHomeData);
+  };
+
+  const Clip = ({ url }) => {
+    return (
+      <video key={url} controls loop muted>
+        <source src={url} />
+      </video>
+    );
   };
 
   return (
@@ -196,12 +204,10 @@ const HomeAdmin = (props) => {
       <div className={classes.Container}>
         {homeData.vids.map((el, i) => (
           <div key={i} className={classes.Item}>
-            <video controls loop>
-              <source src={el} type="video/mp4" />
-            </video>
+            <Clip url={el}></Clip>
             <FaAngleLeft onClick={() => swapVideo(i, -1)} />
             <FaTrash onClick={() => delVideo(i)} />
-            <FaAngleLeft onClick={() => swapVideo(i, -1)} />
+            <FaAngleRight onClick={() => swapVideo(i, 1)} />
           </div>
         ))}
         <div className={classes.Item}>

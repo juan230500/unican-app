@@ -1,19 +1,33 @@
 import Header from "./Header/Header";
-import video1 from "../../assets/video1.mp4";
-import video2 from "../../assets/video2.mp4";
 import classes from "./HomePage.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../../utils/constants";
 
 const HomePage = () => {
+  const [homeData, setHomeData] = useState({
+    title: "",
+    subtitle: "",
+    imgs: [],
+    vids: [],
+  });
+
+  const get = async () => {
+    const res = await axios.get(BASE_URL + "home");
+    res.data && setHomeData(res.data);
+  };
+
+  useEffect(() => get(), []);
+
   return (
     <div>
-      <Header />
+      <Header homeData={homeData} />
       <div className={classes.Videos}>
-        <video autoPlay muted controls loop>
-          <source src={video1} type="video/mp4" />
-        </video>
-        <video autoPlay muted controls loop>
-          <source src={video2} type="video/mp4" />
-        </video>
+        {homeData.vids.map((el) => (
+          <video autoPlay muted controls loop>
+            <source src={el} type="video/mp4" />
+          </video>
+        ))}
       </div>
     </div>
   );

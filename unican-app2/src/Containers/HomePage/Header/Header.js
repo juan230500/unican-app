@@ -1,32 +1,17 @@
-import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import { BASE_URL } from "../../../utils/constants";
 import classes from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   const [index, setIndex] = useState(0);
   const intervalId = useRef();
-  const [homeData, setHomeData] = useState({
-    title: "",
-    subtitle: "",
-    imgs: [],
-    vids: [],
-  });
-
-  const get = async () => {
-    const res = await axios.get(BASE_URL + "home");
-    res.data && setHomeData(res.data);
-  };
-
-  useEffect(() => get(), []);
 
   useEffect(() => {
     intervalId.current = setTimeout(
-      () => setIndex((i) => (i > homeData.imgs.length - 2 ? 0 : i + 1)),
+      () => setIndex((i) => (i > props.homeData.imgs.length - 2 ? 0 : i + 1)),
       4500
     );
     return () => clearTimeout(intervalId.current);
-  }, [homeData.imgs, index]);
+  }, [props.homeData.imgs, index]);
 
   //Su mejor Socio Comercial
   //En soluciones de empaques plásticos de Inyección Alta
@@ -34,11 +19,11 @@ const Header = () => {
   return (
     <div className={classes.Header}>
       <div className={classes.Column}>
-        <h1>{homeData.title}</h1>
-        <p>{homeData.title}</p>
+        <h1>{props.homeData.title}</h1>
+        <p>{props.homeData.subtitle}</p>
       </div>
       <div className={classes.ColumnRight}>
-        {homeData.imgs.map((_, i) => (
+        {props.homeData.imgs.map((_, i) => (
           <div
             onClick={() => setIndex(i)}
             className={[classes.Ball, i === index ? classes.Active : ""].join(
@@ -48,7 +33,7 @@ const Header = () => {
         ))}
       </div>
       <div className={classes.Album}>
-        {homeData.imgs.map((el, i) => (
+        {props.homeData.imgs.map((el, i) => (
           <div
             className={classes.ImgContainer}
             style={{
