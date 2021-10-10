@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, Route, Switch } from "react-router-dom";
+import AboutAdmin from "./AboutAdmin/AboutAdmin";
 import classes from "./AdminPage.module.css";
 import AuthForm from "./AuthForm/AuthForm";
 import CategoryAdmin from "./CategoryAdmin/CategoryAdmin";
@@ -21,6 +22,7 @@ const AdminPage = () => {
             <Link to="/admin/categories">Categorías</Link>
             <Link to="/admin/contact">Contacto</Link>
             <Link to="/admin/home">Inicio</Link>
+            <Link to="/admin/about">Nuestra empresa</Link>
           </div>
           <Switch>
             <Route path="/admin/products">
@@ -34,6 +36,9 @@ const AdminPage = () => {
             </Route>
             <Route path="/admin/home">
               <HomeAdmin auth={auth} />
+            </Route>
+            <Route path="/admin/about">
+              <AboutAdmin auth={auth} />
             </Route>
           </Switch>
         </div>

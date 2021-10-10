@@ -18,7 +18,7 @@ export const customConfirm = (message, callBack) => {
   });
 };
 
-export const BASE_URL = "https://unicancr.com/api/";
+export const BASE_URL = "http://localhost:4000/";
 //"http://54.196.37.43/api/"
 //"https://unicancr.com/api/"
 //"http://localhost:4000/"

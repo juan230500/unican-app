@@ -11,6 +11,7 @@ const products = require("./routes/products");
 const categories = require("./routes/categories");
 const contact = require("./routes/contact");
 const home = require("./routes/home");
+const about = require("./routes/about");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -76,6 +77,7 @@ app.use("/products", authorize, products);
 app.use("/categories", authorize, categories);
 app.use("/contact", authorize, contact);
 app.use("/home", authorize, home);
+app.use("/about", authorize, about);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

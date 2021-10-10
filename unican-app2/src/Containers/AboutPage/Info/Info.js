@@ -3,7 +3,7 @@ import classes from "./Info.module.css";
 import * as Icons from "react-icons/fa";
 import cert1 from "../../../assets/about/Certificado ISO 50001 UNICAN.jpg";
 import cert2 from "../../../assets/about/Certificado ISO 2015_page-0001.jpg";
-import green from "../../../assets/about/rec.jpg";
+import rec from "../../../assets/about/rec.jpg";
 import green2 from "../../../assets/about/green.jpeg";
 import ReactMarkdown from "react-markdown";
 
@@ -33,7 +33,7 @@ const Info = (props) => {
       ].join(" ")}
     >
       <div style={{ margin: "auto" }}>
-        {props.green && (
+        {props.special === "green" && (
           <div className={classes.Green2}>
             <img src={green2} alt={green2}></img>
           </div>
@@ -41,7 +41,7 @@ const Info = (props) => {
         <h2>{props.title}</h2>
         {Icon && <Icon />}
         <ReactMarkdown>{props.text}</ReactMarkdown>
-        {props.certify && props.showText && (
+        {props.special === "certify" && props.showText && (
           <div>
             <img
               onClick={(e) => {
@@ -61,9 +61,9 @@ const Info = (props) => {
             ></img>
           </div>
         )}
-        {props.green && (
+        {props.special === "green" && (
           <div className={classes.Green}>
-            <img src={green} alt={green}></img>
+            <img src={rec} alt={rec}></img>
           </div>
         )}
       </div>

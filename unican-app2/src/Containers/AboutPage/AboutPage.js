@@ -1,17 +1,27 @@
 import React, { useState } from "react";
 import classes from "./AboutPage.module.css";
 import Info from "./Info/Info";
-import aboutJson from "../../assets/about/about.json";
+//import aboutJson from "../../assets/about/about.json";
+import axios from "axios";
+import { BASE_URL } from "../../utils/constants";
 
 const AboutPage = () => {
   const [index, setIndex] = useState(-1);
+  const [items, setItems] = useState([]);
+
+  const get = async () => {
+    const response = await axios.get(BASE_URL + "about");
+    setItems(response.data || []);
+  };
+
+  useState(() => get(), []);
 
   return (
     <div className={classes.About}>
       <div className={classes.Column}>
-        {aboutJson.group1.map((el, i) =>
+        {items.map((el, i) =>
           el.level > 1 ? (
-            <h1>{el.title}</h1>
+            <h1>{el.text}</h1>
           ) : (
             <Info
               onExpand={() => setIndex(i === index ? -1 : i)}
@@ -23,7 +33,7 @@ const AboutPage = () => {
         )}
       </div>
       <div className={classes.Column}>
-        {aboutJson.group1.map((el, i) => (
+        {items.map((el, i) => (
           <Info
             style={{
               position: "absolute",

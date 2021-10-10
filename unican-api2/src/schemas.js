@@ -39,9 +39,19 @@ const homeSchema = new Schema({
 
 const homeModel = mongoose.model("Home", homeSchema);
 
+const aboutSchema = new Schema({
+  text: String,
+  level: Number,
+  icon: String,
+  special: String,
+});
+
+const aboutModel = mongoose.model("About", aboutSchema);
+
 module.exports = {
   productModel,
   categoryModel,
   contactModel,
   homeModel,
+  aboutModel,
 };
