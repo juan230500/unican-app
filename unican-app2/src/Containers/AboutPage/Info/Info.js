@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Info.module.css";
 import * as Icons from "react-icons/fa";
-import cert1 from "../../../assets/about/Certificado ISO 50001 UNICAN.jpg";
-import cert2 from "../../../assets/about/Certificado ISO 2015_page-0001.jpg";
+import cert1 from "../../../assets/about/cert1.png";
+import cert2 from "../../../assets/about/cert2.png";
 import rec from "../../../assets/about/rec.jpg";
 import green2 from "../../../assets/about/green.jpeg";
 import ReactMarkdown from "react-markdown";

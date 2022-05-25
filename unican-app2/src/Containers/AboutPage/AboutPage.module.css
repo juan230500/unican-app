@@ -3,6 +3,7 @@
   background-image: url("../../assets/home/2_DSC9786.jpeg");
   background-size: cover;
   display: flex;
+  min-height: 480px;
 }
 
 .Column {

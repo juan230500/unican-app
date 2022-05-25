@@ -46,6 +46,22 @@ const AboutAdmin = (props) => {
     setItems(newItems);
   };
 
+  const addImage = async (img, i) => {
+    const formData = new FormData();
+    formData.append("newImage", img);
+    const toastId = toast.info(`La imagen ${img.name} se está cargando ...`, {
+      autoClose: false,
+    });
+    console.log(items[i]);
+
+    // await axios.post(BASE_URL + "about/img/", formData, {
+    //   headers: { Authorization: props.auth },
+    // });
+    toast.dismiss(toastId);
+    toast.success(`La imagen ${img.name} se ha cargado correctamente`);
+    get();
+  };
+
   const del = (i) => {
     if (items.length < 2) {
       toast.warning("Se debe dejar al menos un about");
@@ -121,6 +137,15 @@ const AboutAdmin = (props) => {
                 <option value="green">Piensa Verde</option>
                 <option value="certify">Certificados</option>
               </select>
+              <label style={{ cursor: "pointer" }} htmlFor={"upload-photo" + i}>
+                <h3>Subir una imagen</h3>
+              </label>
+              <input
+                style={{ display: "none" }}
+                type="file"
+                onChange={(e) => addImage(e.target.files[0], i)}
+                id={"upload-photo" + i}
+              />
               <div>
                 <FaTrash onClick={() => del(i)} color="red" />
                 <FaArrowUp onClick={() => swap(i, -1)} />
